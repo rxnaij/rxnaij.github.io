@@ -1,0 +1,2846 @@
+
+        <!DOCTYPE html>
+        <head>
+            
+        
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster-src.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js"></script>
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://raw.githubusercontent.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+        
+        
+        
+            
+            <style>
+
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                }
+
+            #map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+            
+        
+            
+            <style> #map_37c05162c76347bd8a7d20a0d03365b0 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js"></script>
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+        
+        
+        
+        
+        </head>
+        <body>
+            
+        
+            
+            <div class="folium-map" id="map_37c05162c76347bd8a7d20a0d03365b0" ></div>
+        
+        
+        
+        </body>
+        <script>
+            
+        
+            
+
+            var southWest = L.latLng(-90, -180);
+            var northEast = L.latLng(90, 180);
+            var bounds = L.latLngBounds(southWest, northEast);
+
+            var map_37c05162c76347bd8a7d20a0d03365b0 = L.map('map_37c05162c76347bd8a7d20a0d03365b0', {
+                                           center:[40.715441,-73.804684],
+                                           zoom: 10,
+                                           maxBounds: bounds,
+                                           layers: [],
+                                           crs: L.CRS.EPSG3857
+                                         });
+            
+        
+        
+            
+            var tile_layer_ebf2f8ba241a4ef199a9700d653d7d00 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+                    maxZoom: 18,
+                    minZoom: 1,
+                    attribution: 'Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
+                    detectRetina: false
+                    }
+                ).addTo(map_37c05162c76347bd8a7d20a0d03365b0);
+
+        
+        
+            
+                var marker_cluster_666229e224344bb18dd0c610db5b4faa = L.markerClusterGroup();
+                map_37c05162c76347bd8a7d20a0d03365b0.addLayer(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+
+            var marker_d6a7129b80354116be2013eeb0ff46f5 = L.marker(
+                [40.733292299999995,-73.98717990000002],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_7f4bcc9e87a34867bf990b00d8fb14fe = L.popup({maxWidth: '300'});
+
+            
+                var html_99e03d3b2db0471fb17a98df08edad30 = $('         <div id="html_99e03d3b2db0471fb17a98df08edad30"                 style="width: 100.0%; height: 100.0%;">                 12/31/15 EAST 14 STREET, 3 AVENUE street</div>                 ')[0];
+                popup_7f4bcc9e87a34867bf990b00d8fb14fe.setContent(html_99e03d3b2db0471fb17a98df08edad30);
+            
+
+            marker_d6a7129b80354116be2013eeb0ff46f5.bindPopup(popup_7f4bcc9e87a34867bf990b00d8fb14fe);
+
+            
+        
+        
+            
+
+            var marker_7af57c5f36f44f64a94cdfa6dfd956e4 = L.marker(
+                [40.73234779999999,-73.9849394],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_cf8fafc9ef0d42a180afe5c9525de858 = L.popup({maxWidth: '300'});
+
+            
+                var html_0c21f4a94c1f4595b8a761824e64b4fe = $('         <div id="html_0c21f4a94c1f4595b8a761824e64b4fe"                 style="width: 100.0%; height: 100.0%;">                 12/15/15 EAST 14 STREET, 2 AVENUE street</div>                 ')[0];
+                popup_cf8fafc9ef0d42a180afe5c9525de858.setContent(html_0c21f4a94c1f4595b8a761824e64b4fe);
+            
+
+            marker_7af57c5f36f44f64a94cdfa6dfd956e4.bindPopup(popup_cf8fafc9ef0d42a180afe5c9525de858);
+
+            
+        
+        
+            
+
+            var marker_1496d805fff54330bcbd8ae92210212a = L.marker(
+                [40.7313217,-73.9886127],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_3f184336c04d469f876e482df5022058 = L.popup({maxWidth: '300'});
+
+            
+                var html_e0c5fa21e9f94d47a063d1f0a17b0f41 = $('         <div id="html_e0c5fa21e9f94d47a063d1f0a17b0f41"                 style="width: 100.0%; height: 100.0%;">                 12/9/15 EAST 11 STREET, 3 AVENUE street</div>                 ')[0];
+                popup_3f184336c04d469f876e482df5022058.setContent(html_e0c5fa21e9f94d47a063d1f0a17b0f41);
+            
+
+            marker_1496d805fff54330bcbd8ae92210212a.bindPopup(popup_3f184336c04d469f876e482df5022058);
+
+            
+        
+        
+            
+
+            var marker_8804622ae3fe4755a32423a3038ad62a = L.marker(
+                [40.7365615,-73.98901590000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_46cc7e4cc8f94db4949bd15192af6357 = L.popup({maxWidth: '300'});
+
+            
+                var html_43e5781e94b24243b28d0bf3e5e2a228 = $('         <div id="html_43e5781e94b24243b28d0bf3e5e2a228"                 style="width: 100.0%; height: 100.0%;">                 12/5/15 EAST 17 STREET, UNION SQUARE EAST protected</div>                 ')[0];
+                popup_46cc7e4cc8f94db4949bd15192af6357.setContent(html_43e5781e94b24243b28d0bf3e5e2a228);
+            
+
+            marker_8804622ae3fe4755a32423a3038ad62a.bindPopup(popup_46cc7e4cc8f94db4949bd15192af6357);
+
+            
+        
+        
+            
+
+            var marker_36156245b72e4255bd2b851ac9f44cdd = L.marker(
+                [40.727975799999996,-73.988119],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_8f2794326d024a009cfc15fd3bd45cc5 = L.popup({maxWidth: '300'});
+
+            
+                var html_c6922cbb95824db4ae23852f790950b6 = $('         <div id="html_c6922cbb95824db4ae23852f790950b6"                 style="width: 100.0%; height: 100.0%;">                 12/5/15 EAST 7 STREET, 2 AVENUE street</div>                 ')[0];
+                popup_8f2794326d024a009cfc15fd3bd45cc5.setContent(html_c6922cbb95824db4ae23852f790950b6);
+            
+
+            marker_36156245b72e4255bd2b851ac9f44cdd.bindPopup(popup_8f2794326d024a009cfc15fd3bd45cc5);
+
+            
+        
+        
+            
+
+            var marker_30a6624359b2477c9a0a9449ae335c6d = L.marker(
+                [40.73234779999999,-73.9849394],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_ab552c01bb904cc3880769ecad06b214 = L.popup({maxWidth: '300'});
+
+            
+                var html_06a51ded426346f08639ce9d14902427 = $('         <div id="html_06a51ded426346f08639ce9d14902427"                 style="width: 100.0%; height: 100.0%;">                 11/21/15 3 AVENUE, EAST 14 STREET street</div>                 ')[0];
+                popup_ab552c01bb904cc3880769ecad06b214.setContent(html_06a51ded426346f08639ce9d14902427);
+            
+
+            marker_30a6624359b2477c9a0a9449ae335c6d.bindPopup(popup_ab552c01bb904cc3880769ecad06b214);
+
+            
+        
+        
+            
+
+            var marker_c52c13fc04134804b2416945c330aa29 = L.marker(
+                [40.7311655,-73.99192140000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_101e4965b7ea4b97b8ab58a7d61b9fa8 = L.popup({maxWidth: '300'});
+
+            
+                var html_2e2436d1764c4e639fbf89b459c4fca6 = $('         <div id="html_2e2436d1764c4e639fbf89b459c4fca6"                 style="width: 100.0%; height: 100.0%;">                 11/20/15 BROADWAY, EAST 9 STREET street</div>                 ')[0];
+                popup_101e4965b7ea4b97b8ab58a7d61b9fa8.setContent(html_2e2436d1764c4e639fbf89b459c4fca6);
+            
+
+            marker_c52c13fc04134804b2416945c330aa29.bindPopup(popup_101e4965b7ea4b97b8ab58a7d61b9fa8);
+
+            
+        
+        
+            
+
+            var marker_b52025804ccf454992816224e564f387 = L.marker(
+                [40.7346735,-73.99458390000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_c58387db311b4919bffe4571b06203d2 = L.popup({maxWidth: '300'});
+
+            
+                var html_1b14c0921e2447e693f117ad0fe5f715 = $('         <div id="html_1b14c0921e2447e693f117ad0fe5f715"                 style="width: 100.0%; height: 100.0%;">                 11/19/15 5 AVENUE, EAST 12 STREET normal</div>                 ')[0];
+                popup_c58387db311b4919bffe4571b06203d2.setContent(html_1b14c0921e2447e693f117ad0fe5f715);
+            
+
+            marker_b52025804ccf454992816224e564f387.bindPopup(popup_c58387db311b4919bffe4571b06203d2);
+
+            
+        
+        
+            
+
+            var marker_729d5ae8b3824738a37d1bc8f283b47a = L.marker(
+                [40.735313,-73.9941184],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_53339512a4ec486b9eaf0e80e9bfc03e = L.popup({maxWidth: '300'});
+
+            
+                var html_42ca44b7bc3f4efcb257fb70a1a242e4 = $('         <div id="html_42ca44b7bc3f4efcb257fb70a1a242e4"                 style="width: 100.0%; height: 100.0%;">                 11/13/15 5 AVENUE, EAST 13 STREET normal</div>                 ')[0];
+                popup_53339512a4ec486b9eaf0e80e9bfc03e.setContent(html_42ca44b7bc3f4efcb257fb70a1a242e4);
+            
+
+            marker_729d5ae8b3824738a37d1bc8f283b47a.bindPopup(popup_53339512a4ec486b9eaf0e80e9bfc03e);
+
+            
+        
+        
+            
+
+            var marker_2957dfa9913248d99cb48bf1842bd9ce = L.marker(
+                [40.7339213,-73.9927942],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_ef3841bf1ef4419085255b5ec3d8a11f = L.popup({maxWidth: '300'});
+
+            
+                var html_d8224a4c9cdd4f768df704128ba1f17b = $('         <div id="html_d8224a4c9cdd4f768df704128ba1f17b"                 style="width: 100.0%; height: 100.0%;">                 11/12/15 EAST 12 STREET, UNIVERSITY PLACE street</div>                 ')[0];
+                popup_ef3841bf1ef4419085255b5ec3d8a11f.setContent(html_d8224a4c9cdd4f768df704128ba1f17b);
+            
+
+            marker_2957dfa9913248d99cb48bf1842bd9ce.bindPopup(popup_ef3841bf1ef4419085255b5ec3d8a11f);
+
+            
+        
+        
+            
+
+            var marker_c52bdee708b24d7fb4190e59a0b6a8a2 = L.marker(
+                [40.7291862,-73.98724920000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_ecd232abe4af4692a6401c51063392d5 = L.popup({maxWidth: '300'});
+
+            
+                var html_ddd1bc813fde411fb8e714404451ca67 = $('         <div id="html_ddd1bc813fde411fb8e714404451ca67"                 style="width: 100.0%; height: 100.0%;">                 11/11/15 2 AVENUE, EAST 9 STREET protected</div>                 ')[0];
+                popup_ecd232abe4af4692a6401c51063392d5.setContent(html_ddd1bc813fde411fb8e714404451ca67);
+            
+
+            marker_c52bdee708b24d7fb4190e59a0b6a8a2.bindPopup(popup_ecd232abe4af4692a6401c51063392d5);
+
+            
+        
+        
+            
+
+            var marker_69fba4b74f994c93bedda3f33b8acbb8 = L.marker(
+                [40.7369617,-73.98450890000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_4aa8b3da076c47ff808585cdd432e62c = L.popup({maxWidth: '300'});
+
+            
+                var html_fb8daf6b085d4618a4524eca2bb399bd = $('         <div id="html_fb8daf6b085d4618a4524eca2bb399bd"                 style="width: 100.0%; height: 100.0%;">                 11/7/15 3 AVENUE, EAST 20 STREET street</div>                 ')[0];
+                popup_4aa8b3da076c47ff808585cdd432e62c.setContent(html_fb8daf6b085d4618a4524eca2bb399bd);
+            
+
+            marker_69fba4b74f994c93bedda3f33b8acbb8.bindPopup(popup_4aa8b3da076c47ff808585cdd432e62c);
+
+            
+        
+        
+            
+
+            var marker_f4ea4717722e41699704b7fab7655632 = L.marker(
+                [40.736531400000004,-73.9907516],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_8baed9fbf43a44e5950a86fd3ce3c228 = L.popup({maxWidth: '300'});
+
+            
+                var html_47588d62b95c42fab92a4fb35c18e711 = $('         <div id="html_47588d62b95c42fab92a4fb35c18e711"                 style="width: 100.0%; height: 100.0%;">                 11/6/15 EAST 16 STREET, UNION SQUARE WEST street</div>                 ')[0];
+                popup_8baed9fbf43a44e5950a86fd3ce3c228.setContent(html_47588d62b95c42fab92a4fb35c18e711);
+            
+
+            marker_f4ea4717722e41699704b7fab7655632.bindPopup(popup_8baed9fbf43a44e5950a86fd3ce3c228);
+
+            
+        
+        
+            
+
+            var marker_3f23a0f2399e443690ef147d6800ebd6 = L.marker(
+                [40.7360047,-73.9936167],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_2488f3f3e07c44ce982ceae8851eedd9 = L.popup({maxWidth: '300'});
+
+            
+                var html_c59cfe9c49464c47bfbb2333881c228c = $('         <div id="html_c59cfe9c49464c47bfbb2333881c228c"                 style="width: 100.0%; height: 100.0%;">                 11/3/15 WEST 14 STREET, 5 AVENUE street</div>                 ')[0];
+                popup_2488f3f3e07c44ce982ceae8851eedd9.setContent(html_c59cfe9c49464c47bfbb2333881c228c);
+            
+
+            marker_3f23a0f2399e443690ef147d6800ebd6.bindPopup(popup_2488f3f3e07c44ce982ceae8851eedd9);
+
+            
+        
+        
+            
+
+            var marker_4ed470d8d99e44169d33d8e29ea51669 = L.marker(
+                [40.7371433,-73.98859370000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_4321047d15e8465aa867f6360e9b8c15 = L.popup({maxWidth: '300'});
+
+            
+                var html_57e1c392de9a4a06a324ce856bed15d8 = $('         <div id="html_57e1c392de9a4a06a324ce856bed15d8"                 style="width: 100.0%; height: 100.0%;">                 10/23/15 PARK AVENUE SOUTH, EAST 18 STREET street</div>                 ')[0];
+                popup_4321047d15e8465aa867f6360e9b8c15.setContent(html_57e1c392de9a4a06a324ce856bed15d8);
+            
+
+            marker_4ed470d8d99e44169d33d8e29ea51669.bindPopup(popup_4321047d15e8465aa867f6360e9b8c15);
+
+            
+        
+        
+            
+
+            var marker_5f8329a939ba45648970e373141e8f9d = L.marker(
+                [40.735370399999994,-73.9899687],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_1342a9b658f6495dbaf7d4ec37f57910 = L.popup({maxWidth: '300'});
+
+            
+                var html_5021bd281db748ce82cbfdba42c6ea19 = $('         <div id="html_5021bd281db748ce82cbfdba42c6ea19"                 style="width: 100.0%; height: 100.0%;">                 10/20/15 UNION SQUARE EAST, EAST 15 STREET shared</div>                 ')[0];
+                popup_1342a9b658f6495dbaf7d4ec37f57910.setContent(html_5021bd281db748ce82cbfdba42c6ea19);
+            
+
+            marker_5f8329a939ba45648970e373141e8f9d.bindPopup(popup_1342a9b658f6495dbaf7d4ec37f57910);
+
+            
+        
+        
+            
+
+            var marker_8688a8a8497947619a6f3d2ac5e95fa3 = L.marker(
+                [40.733034,-73.9844413],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_5f661aa5689249069a15276060feb36d = L.popup({maxWidth: '300'});
+
+            
+                var html_6109e9c3dec448d0ae80489bf75b882e = $('         <div id="html_6109e9c3dec448d0ae80489bf75b882e"                 style="width: 100.0%; height: 100.0%;">                 10/17/15 2 AVENUE, EAST 15 STREET protected</div>                 ')[0];
+                popup_5f661aa5689249069a15276060feb36d.setContent(html_6109e9c3dec448d0ae80489bf75b882e);
+            
+
+            marker_8688a8a8497947619a6f3d2ac5e95fa3.bindPopup(popup_5f661aa5689249069a15276060feb36d);
+
+            
+        
+        
+            
+
+            var marker_7647cfb954ae4219a6d74e51ce27274d = L.marker(
+                [40.7319639,-73.98815429999999],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_5154da118e644b52acaebfe505077a96 = L.popup({maxWidth: '300'});
+
+            
+                var html_8c3d8347e770457da41e1c7f1125d000 = $('         <div id="html_8c3d8347e770457da41e1c7f1125d000"                 style="width: 100.0%; height: 100.0%;">                 10/14/15 EAST 12 STREET, 3 AVENUE street</div>                 ')[0];
+                popup_5154da118e644b52acaebfe505077a96.setContent(html_8c3d8347e770457da41e1c7f1125d000);
+            
+
+            marker_7647cfb954ae4219a6d74e51ce27274d.bindPopup(popup_5154da118e644b52acaebfe505077a96);
+
+            
+        
+        
+            
+
+            var marker_908fedceb8974002a5f792f66897c7de = L.marker(
+                [40.7319639,-73.98815429999999],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_cda886a440f24e89ab0c2eb8f010abcc = L.popup({maxWidth: '300'});
+
+            
+                var html_852590dda9ee48898f6ea430e6859e72 = $('         <div id="html_852590dda9ee48898f6ea430e6859e72"                 style="width: 100.0%; height: 100.0%;">                 10/12/15 EAST 12 STREET, 3 AVENUE street</div>                 ')[0];
+                popup_cda886a440f24e89ab0c2eb8f010abcc.setContent(html_852590dda9ee48898f6ea430e6859e72);
+            
+
+            marker_908fedceb8974002a5f792f66897c7de.bindPopup(popup_cda886a440f24e89ab0c2eb8f010abcc);
+
+            
+        
+        
+            
+
+            var marker_9d7baccf4ca14b258b898ff0f91fe0b1 = L.marker(
+                [40.7344344,-73.98990390000002],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_865c889c501c4b9e9f8748ce7a178900 = L.popup({maxWidth: '300'});
+
+            
+                var html_a33b15bb060644d1a9edbe18f717cdeb = $('         <div id="html_a33b15bb060644d1a9edbe18f717cdeb"                 style="width: 100.0%; height: 100.0%;">                 10/10/15 UNION SQUARE EAST, EAST 14 STREET shared</div>                 ')[0];
+                popup_865c889c501c4b9e9f8748ce7a178900.setContent(html_a33b15bb060644d1a9edbe18f717cdeb);
+            
+
+            marker_9d7baccf4ca14b258b898ff0f91fe0b1.bindPopup(popup_865c889c501c4b9e9f8748ce7a178900);
+
+            
+        
+        
+            
+
+            var marker_6d440e9ba0da4f01b178f327533a3e4c = L.marker(
+                [40.7261864,-73.98942890000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_6c041833159c457cb51b46a9889d1c37 = L.popup({maxWidth: '300'});
+
+            
+                var html_778652295c56453396b3d6ea156e348b = $('         <div id="html_778652295c56453396b3d6ea156e348b"                 style="width: 100.0%; height: 100.0%;">                 10/8/15 2 AVENUE, EAST 4 STREET protected</div>                 ')[0];
+                popup_6c041833159c457cb51b46a9889d1c37.setContent(html_778652295c56453396b3d6ea156e348b);
+            
+
+            marker_6d440e9ba0da4f01b178f327533a3e4c.bindPopup(popup_6c041833159c457cb51b46a9889d1c37);
+
+            
+        
+        
+            
+
+            var marker_c66d3749ff4b4a029107d3ebf4fa6cb9 = L.marker(
+                [40.7301223,-73.989468],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_5948dec2220b41c899661519fea81a9b = L.popup({maxWidth: '300'});
+
+            
+                var html_e2a51eb266374c96a4e3e432fb075de6 = $('         <div id="html_e2a51eb266374c96a4e3e432fb075de6"                 style="width: 100.0%; height: 100.0%;">                 10/8/15 EAST 9 STREET, 3 AVENUE normal</div>                 ')[0];
+                popup_5948dec2220b41c899661519fea81a9b.setContent(html_e2a51eb266374c96a4e3e432fb075de6);
+            
+
+            marker_c66d3749ff4b4a029107d3ebf4fa6cb9.bindPopup(popup_5948dec2220b41c899661519fea81a9b);
+
+            
+        
+        
+            
+
+            var marker_6420886308eb441f8dd61b64835011a4 = L.marker(
+                [40.7360047,-73.9936167],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_1ddcd3bc46c8468c8892fef87ef1c77a = L.popup({maxWidth: '300'});
+
+            
+                var html_5cdaaaf196f74d61a45ac5053893d2ef = $('         <div id="html_5cdaaaf196f74d61a45ac5053893d2ef"                 style="width: 100.0%; height: 100.0%;">                 10/5/15 EAST 14 STREET, 5 AVENUE street</div>                 ')[0];
+                popup_1ddcd3bc46c8468c8892fef87ef1c77a.setContent(html_5cdaaaf196f74d61a45ac5053893d2ef);
+            
+
+            marker_6420886308eb441f8dd61b64835011a4.bindPopup(popup_1ddcd3bc46c8468c8892fef87ef1c77a);
+
+            
+        
+        
+            
+
+            var marker_174691ffaace417dac6ab82af7273d44 = L.marker(
+                [40.727866399999996,-73.9931449],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_1d8f66a244d14d0c9746d403db824292 = L.popup({maxWidth: '300'});
+
+            
+                var html_d46f778fa30a4a8097df313c86ecd316 = $('         <div id="html_d46f778fa30a4a8097df313c86ecd316"                 style="width: 100.0%; height: 100.0%;">                 9/30/15 LAFAYETTE STREET, EAST 4 STREET protected</div>                 ')[0];
+                popup_1d8f66a244d14d0c9746d403db824292.setContent(html_d46f778fa30a4a8097df313c86ecd316);
+            
+
+            marker_174691ffaace417dac6ab82af7273d44.bindPopup(popup_1d8f66a244d14d0c9746d403db824292);
+
+            
+        
+        
+            
+
+            var marker_a07b235da0a84a2685a3ff1b8752ccbe = L.marker(
+                [40.7396742,-73.990946],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_fbc2374fc0e545d8b97fbe13ee0fd67b = L.popup({maxWidth: '300'});
+
+            
+                var html_d6d4bdf85d31480686f36b19d039fe0c = $('         <div id="html_d6d4bdf85d31480686f36b19d039fe0c"                 style="width: 100.0%; height: 100.0%;">                 9/30/15 WEST 20 STREET, 5 AVENUE street</div>                 ')[0];
+                popup_fbc2374fc0e545d8b97fbe13ee0fd67b.setContent(html_d6d4bdf85d31480686f36b19d039fe0c);
+            
+
+            marker_a07b235da0a84a2685a3ff1b8752ccbe.bindPopup(popup_fbc2374fc0e545d8b97fbe13ee0fd67b);
+
+            
+        
+        
+            
+
+            var marker_4401f35e1ae14e89a9e5201c879330c2 = L.marker(
+                [40.7292299,-73.9854957],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_6a7ab3b4ac4d48f28d7d29759467a9b2 = L.popup({maxWidth: '300'});
+
+            
+                var html_052974779abd4595a3c671c671ce8309 = $('         <div id="html_052974779abd4595a3c671c671ce8309"                 style="width: 100.0%; height: 100.0%;">                 9/27/15 nan, nan street</div>                 ')[0];
+                popup_6a7ab3b4ac4d48f28d7d29759467a9b2.setContent(html_052974779abd4595a3c671c671ce8309);
+            
+
+            marker_4401f35e1ae14e89a9e5201c879330c2.bindPopup(popup_6a7ab3b4ac4d48f28d7d29759467a9b2);
+
+            
+        
+        
+            
+
+            var marker_5b57273f34bb4e88868788dab9960d7a = L.marker(
+                [40.735214,-73.9917152],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_7049610f529040838d3d88903c1ad62d = L.popup({maxWidth: '300'});
+
+            
+                var html_0af1e6831fbe4f6b8454441bd0486240 = $('         <div id="html_0af1e6831fbe4f6b8454441bd0486240"                 style="width: 100.0%; height: 100.0%;">                 9/26/15 EAST 14 STREET, UNION SQUARE WEST street</div>                 ')[0];
+                popup_7049610f529040838d3d88903c1ad62d.setContent(html_0af1e6831fbe4f6b8454441bd0486240);
+            
+
+            marker_5b57273f34bb4e88868788dab9960d7a.bindPopup(popup_7049610f529040838d3d88903c1ad62d);
+
+            
+        
+        
+            
+
+            var marker_8a24884445494ac8a70a48517acfa12c = L.marker(
+                [40.7365615,-73.98901590000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_051dff2178ac444aa2c546ab6dd27759 = L.popup({maxWidth: '300'});
+
+            
+                var html_86724b84f6d043578e72ffe1f654d325 = $('         <div id="html_86724b84f6d043578e72ffe1f654d325"                 style="width: 100.0%; height: 100.0%;">                 9/22/15 PARK AVENUE SOUTH, EAST 17 STREET street</div>                 ')[0];
+                popup_051dff2178ac444aa2c546ab6dd27759.setContent(html_86724b84f6d043578e72ffe1f654d325);
+            
+
+            marker_8a24884445494ac8a70a48517acfa12c.bindPopup(popup_051dff2178ac444aa2c546ab6dd27759);
+
+            
+        
+        
+            
+
+            var marker_00907cd474a44763b9f2feb45ee3946a = L.marker(
+                [40.727975799999996,-73.988119],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_612b5ac1df034767a964a1c4197ee223 = L.popup({maxWidth: '300'});
+
+            
+                var html_ae8e8fb8d66a4a69b0e7045011a1cfa5 = $('         <div id="html_ae8e8fb8d66a4a69b0e7045011a1cfa5"                 style="width: 100.0%; height: 100.0%;">                 9/20/15 EAST 7 STREET, 2 AVENUE street</div>                 ')[0];
+                popup_612b5ac1df034767a964a1c4197ee223.setContent(html_ae8e8fb8d66a4a69b0e7045011a1cfa5);
+            
+
+            marker_00907cd474a44763b9f2feb45ee3946a.bindPopup(popup_612b5ac1df034767a964a1c4197ee223);
+
+            
+        
+        
+            
+
+            var marker_9e8408bb58a84bfb823ed9a06411da84 = L.marker(
+                [40.73038,-73.98637579999999],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_8fec43f5ce6342d38ed9a865396429b6 = L.popup({maxWidth: '300'});
+
+            
+                var html_ea92f9ead26b47c6b3942920c0a89194 = $('         <div id="html_ea92f9ead26b47c6b3942920c0a89194"                 style="width: 100.0%; height: 100.0%;">                 9/20/15 2 AVENUE, EAST 11 STREET protected</div>                 ')[0];
+                popup_8fec43f5ce6342d38ed9a865396429b6.setContent(html_ea92f9ead26b47c6b3942920c0a89194);
+            
+
+            marker_9e8408bb58a84bfb823ed9a06411da84.bindPopup(popup_8fec43f5ce6342d38ed9a865396429b6);
+
+            
+        
+        
+            
+
+            var marker_0f81774f4a444b70977d99aa14e156bf = L.marker(
+                [40.7311655,-73.99192140000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_2ce82036d0ad43bb8f4b0531afce4e00 = L.popup({maxWidth: '300'});
+
+            
+                var html_7221ff469a2643b9991e3ade0ba85f6b = $('         <div id="html_7221ff469a2643b9991e3ade0ba85f6b"                 style="width: 100.0%; height: 100.0%;">                 9/17/15 EAST 9 STREET, BROADWAY normal</div>                 ')[0];
+                popup_2ce82036d0ad43bb8f4b0531afce4e00.setContent(html_7221ff469a2643b9991e3ade0ba85f6b);
+            
+
+            marker_0f81774f4a444b70977d99aa14e156bf.bindPopup(popup_2ce82036d0ad43bb8f4b0531afce4e00);
+
+            
+        
+        
+            
+
+            var marker_3115df703b58448796f9dc5d07032844 = L.marker(
+                [40.7360047,-73.9936167],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_ae38e1cadf4640a4853a63852be3cf48 = L.popup({maxWidth: '300'});
+
+            
+                var html_e906c56ea31f4ae89a532ef7de4f0cbb = $('         <div id="html_e906c56ea31f4ae89a532ef7de4f0cbb"                 style="width: 100.0%; height: 100.0%;">                 9/15/15 5 AVENUE, EAST 14 STREET normal</div>                 ')[0];
+                popup_ae38e1cadf4640a4853a63852be3cf48.setContent(html_e906c56ea31f4ae89a532ef7de4f0cbb);
+            
+
+            marker_3115df703b58448796f9dc5d07032844.bindPopup(popup_ae38e1cadf4640a4853a63852be3cf48);
+
+            
+        
+        
+            
+
+            var marker_a7728570d1a3445594593654890420a7 = L.marker(
+                [40.731288899999996,-73.9903915],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_3335fbb86ab64a5b8f90c3d3e3ec7fcd = L.popup({maxWidth: '300'});
+
+            
+                var html_abca11e578354ac9a49f0c728363e85b = $('         <div id="html_abca11e578354ac9a49f0c728363e85b"                 style="width: 100.0%; height: 100.0%;">                 9/13/15 4 AVENUE, EAST 10 STREET protected</div>                 ')[0];
+                popup_3335fbb86ab64a5b8f90c3d3e3ec7fcd.setContent(html_abca11e578354ac9a49f0c728363e85b);
+            
+
+            marker_a7728570d1a3445594593654890420a7.bindPopup(popup_3335fbb86ab64a5b8f90c3d3e3ec7fcd);
+
+            
+        
+        
+            
+
+            var marker_f6a6de4ac91549a0b56d212a921bc4dd = L.marker(
+                [40.739086900000004,-73.9913755],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_bcd35f182dda439cbf8eb58895585031 = L.popup({maxWidth: '300'});
+
+            
+                var html_939bb0e3a8ed43029c3c41c77240109b = $('         <div id="html_939bb0e3a8ed43029c3c41c77240109b"                 style="width: 100.0%; height: 100.0%;">                 9/11/15 5 AVENUE, EAST 17 STREET normal</div>                 ')[0];
+                popup_bcd35f182dda439cbf8eb58895585031.setContent(html_939bb0e3a8ed43029c3c41c77240109b);
+            
+
+            marker_f6a6de4ac91549a0b56d212a921bc4dd.bindPopup(popup_bcd35f182dda439cbf8eb58895585031);
+
+            
+        
+        
+            
+
+            var marker_98b0598819194c368335716d73e0c667 = L.marker(
+                [40.7319639,-73.98815429999999],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_6332fb8ffdc14deaa8fbb83c9ae9ab45 = L.popup({maxWidth: '300'});
+
+            
+                var html_02d12ae5205e42fe8f51ecc7b193db0e = $('         <div id="html_02d12ae5205e42fe8f51ecc7b193db0e"                 style="width: 100.0%; height: 100.0%;">                 9/9/15 EAST 12 STREET, 3 AVENUE street</div>                 ')[0];
+                popup_6332fb8ffdc14deaa8fbb83c9ae9ab45.setContent(html_02d12ae5205e42fe8f51ecc7b193db0e);
+            
+
+            marker_98b0598819194c368335716d73e0c667.bindPopup(popup_6332fb8ffdc14deaa8fbb83c9ae9ab45);
+
+            
+        
+        
+            
+
+            var marker_bee0cd5c4002481db43fd9c220835ca2 = L.marker(
+                [40.7360047,-73.9936167],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_5a9f2fcda40248249aed37b12a654f41 = L.popup({maxWidth: '300'});
+
+            
+                var html_48a1b45953ec402d8deaf1f9744d69d2 = $('         <div id="html_48a1b45953ec402d8deaf1f9744d69d2"                 style="width: 100.0%; height: 100.0%;">                 9/4/15 WEST 14 STREET, 5 AVENUE street</div>                 ')[0];
+                popup_5a9f2fcda40248249aed37b12a654f41.setContent(html_48a1b45953ec402d8deaf1f9744d69d2);
+            
+
+            marker_bee0cd5c4002481db43fd9c220835ca2.bindPopup(popup_5a9f2fcda40248249aed37b12a654f41);
+
+            
+        
+        
+            
+
+            var marker_78b7d97f13d44c9286f382f255bf4fa7 = L.marker(
+                [40.7298617,-73.9914344],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_d8937620da8f489d83fdd71af0c4cdf8 = L.popup({maxWidth: '300'});
+
+            
+                var html_1ea37ab1a5f54ad989beb8dc0dcd9bf4 = $('         <div id="html_1ea37ab1a5f54ad989beb8dc0dcd9bf4"                 style="width: 100.0%; height: 100.0%;">                 9/1/15 ASTOR PLACE, LAFAYETTE STREET street</div>                 ')[0];
+                popup_d8937620da8f489d83fdd71af0c4cdf8.setContent(html_1ea37ab1a5f54ad989beb8dc0dcd9bf4);
+            
+
+            marker_78b7d97f13d44c9286f382f255bf4fa7.bindPopup(popup_d8937620da8f489d83fdd71af0c4cdf8);
+
+            
+        
+        
+            
+
+            var marker_7c121c497bd4454da9288a81e1ca7b4c = L.marker(
+                [40.736019899999995,-73.9822683],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_01d4e51271254d74b4185a415b77bb62 = L.popup({maxWidth: '300'});
+
+            
+                var html_f33ee7ec808442a6b55580d2a451210e = $('         <div id="html_f33ee7ec808442a6b55580d2a451210e"                 style="width: 100.0%; height: 100.0%;">                 8/31/15 2 AVENUE, EAST 20 STREET protected</div>                 ')[0];
+                popup_01d4e51271254d74b4185a415b77bb62.setContent(html_f33ee7ec808442a6b55580d2a451210e);
+            
+
+            marker_7c121c497bd4454da9288a81e1ca7b4c.bindPopup(popup_01d4e51271254d74b4185a415b77bb62);
+
+            
+        
+        
+            
+
+            var marker_a56e00972693405eaac4d9855d03a87b = L.marker(
+                [40.7295515,-73.9899011],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_6ce00d92f70c4d15a290e2fbc60dafe0 = L.popup({maxWidth: '300'});
+
+            
+                var html_10592d8ec590461895b6c8948ede3d3a = $('         <div id="html_10592d8ec590461895b6c8948ede3d3a"                 style="width: 100.0%; height: 100.0%;">                 8/29/15 3 AVENUE, SAINT MARKS PLACE street</div>                 ')[0];
+                popup_6ce00d92f70c4d15a290e2fbc60dafe0.setContent(html_10592d8ec590461895b6c8948ede3d3a);
+            
+
+            marker_a56e00972693405eaac4d9855d03a87b.bindPopup(popup_6ce00d92f70c4d15a290e2fbc60dafe0);
+
+            
+        
+        
+            
+
+            var marker_c6d4268e66fb49848dbf2a2b6a123827 = L.marker(
+                [40.732603399999995,-73.9876815],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_4b1b1233942648509842db5de898086e = L.popup({maxWidth: '300'});
+
+            
+                var html_6537509b2a3b48eeb0cb757a9f4180f9 = $('         <div id="html_6537509b2a3b48eeb0cb757a9f4180f9"                 style="width: 100.0%; height: 100.0%;">                 8/25/15 3 AVENUE, EAST 13 STREET street</div>                 ')[0];
+                popup_4b1b1233942648509842db5de898086e.setContent(html_6537509b2a3b48eeb0cb757a9f4180f9);
+            
+
+            marker_c6d4268e66fb49848dbf2a2b6a123827.bindPopup(popup_4b1b1233942648509842db5de898086e);
+
+            
+        
+        
+            
+
+            var marker_88abca964ad0414792afba64431d1a57 = L.marker(
+                [40.7352052,-73.9857867],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_d6c9d9558b674d35be3ccb6878d84d39 = L.popup({maxWidth: '300'});
+
+            
+                var html_a59c0f7176a14351ad875602b82a27bc = $('         <div id="html_a59c0f7176a14351ad875602b82a27bc"                 style="width: 100.0%; height: 100.0%;">                 8/25/15 EAST 17 STREET, 3 AVENUE street</div>                 ')[0];
+                popup_d6c9d9558b674d35be3ccb6878d84d39.setContent(html_a59c0f7176a14351ad875602b82a27bc);
+            
+
+            marker_88abca964ad0414792afba64431d1a57.bindPopup(popup_d6c9d9558b674d35be3ccb6878d84d39);
+
+            
+        
+        
+            
+
+            var marker_767e66246ed649dab6637539fc1bcbe2 = L.marker(
+                [40.733292299999995,-73.98717990000002],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_9747c1a6c12248d2888e8b71e795842c = L.popup({maxWidth: '300'});
+
+            
+                var html_e5ef1d56da14400e801d4855ae333252 = $('         <div id="html_e5ef1d56da14400e801d4855ae333252"                 style="width: 100.0%; height: 100.0%;">                 8/22/15 3 AVENUE, EAST 14 STREET street</div>                 ')[0];
+                popup_9747c1a6c12248d2888e8b71e795842c.setContent(html_e5ef1d56da14400e801d4855ae333252);
+            
+
+            marker_767e66246ed649dab6637539fc1bcbe2.bindPopup(popup_9747c1a6c12248d2888e8b71e795842c);
+
+            
+        
+        
+            
+
+            var marker_2fc9d76bbbe44ce69e3e0bf92fc06780 = L.marker(
+                [40.7365615,-73.98901590000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_0f64c86f5d774dc691a369e7b243dd85 = L.popup({maxWidth: '300'});
+
+            
+                var html_01e1ac1aa5634079b1e05d0e659b2c24 = $('         <div id="html_01e1ac1aa5634079b1e05d0e659b2c24"                 style="width: 100.0%; height: 100.0%;">                 8/20/15 PARK AVENUE SOUTH, EAST 17 STREET street</div>                 ')[0];
+                popup_0f64c86f5d774dc691a369e7b243dd85.setContent(html_01e1ac1aa5634079b1e05d0e659b2c24);
+            
+
+            marker_2fc9d76bbbe44ce69e3e0bf92fc06780.bindPopup(popup_0f64c86f5d774dc691a369e7b243dd85);
+
+            
+        
+        
+            
+
+            var marker_2687caf9d38c4ec8bf23a6b497b012dd = L.marker(
+                [40.7339649,-73.9887782],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_e2faabcc585c403f9a164557ef6941d3 = L.popup({maxWidth: '300'});
+
+            
+                var html_9e64cc192b1f44e4b0b1816beaf896f5 = $('         <div id="html_9e64cc192b1f44e4b0b1816beaf896f5"                 style="width: 100.0%; height: 100.0%;">                 8/15/15 IRVING PLACE, EAST 14 STREET street</div>                 ')[0];
+                popup_e2faabcc585c403f9a164557ef6941d3.setContent(html_9e64cc192b1f44e4b0b1816beaf896f5);
+            
+
+            marker_2687caf9d38c4ec8bf23a6b497b012dd.bindPopup(popup_e2faabcc585c403f9a164557ef6941d3);
+
+            
+        
+        
+            
+
+            var marker_1d68726c145e449ca8365fb440bb4f1e = L.marker(
+                [40.7360047,-73.9936167],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_032c07f349ef463191099e46268d4a36 = L.popup({maxWidth: '300'});
+
+            
+                var html_ddff15de0b0b4fe9a0338f8798a9ab34 = $('         <div id="html_ddff15de0b0b4fe9a0338f8798a9ab34"                 style="width: 100.0%; height: 100.0%;">                 8/14/15 EAST 14 STREET, 5 AVENUE street</div>                 ')[0];
+                popup_032c07f349ef463191099e46268d4a36.setContent(html_ddff15de0b0b4fe9a0338f8798a9ab34);
+            
+
+            marker_1d68726c145e449ca8365fb440bb4f1e.bindPopup(popup_032c07f349ef463191099e46268d4a36);
+
+            
+        
+        
+            
+
+            var marker_11245b74b7874c7d8e9c41053fcdbb04 = L.marker(
+                [40.73483710000001,-73.983113],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_ee9ce6f8fe664103937d48caf2195d1e = L.popup({maxWidth: '300'});
+
+            
+                var html_f8bae6ddc68846269193ed7db72b3471 = $('         <div id="html_f8bae6ddc68846269193ed7db72b3471"                 style="width: 100.0%; height: 100.0%;">                 8/13/15 EAST 18 STREET, 2 AVENUE street</div>                 ')[0];
+                popup_ee9ce6f8fe664103937d48caf2195d1e.setContent(html_f8bae6ddc68846269193ed7db72b3471);
+            
+
+            marker_11245b74b7874c7d8e9c41053fcdbb04.bindPopup(popup_ee9ce6f8fe664103937d48caf2195d1e);
+
+            
+        
+        
+            
+
+            var marker_0d0911aac63c4cf09b7380e8c1537fd5 = L.marker(
+                [40.7339649,-73.9887782],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_69c4c397aed7475ca33def61ea35ccda = L.popup({maxWidth: '300'});
+
+            
+                var html_2bd3e9e6b50f48128c0e19ac8c3f373c = $('         <div id="html_2bd3e9e6b50f48128c0e19ac8c3f373c"                 style="width: 100.0%; height: 100.0%;">                 8/13/15 EAST 14 STREET, IRVING PLACE street</div>                 ')[0];
+                popup_69c4c397aed7475ca33def61ea35ccda.setContent(html_2bd3e9e6b50f48128c0e19ac8c3f373c);
+            
+
+            marker_0d0911aac63c4cf09b7380e8c1537fd5.bindPopup(popup_69c4c397aed7475ca33def61ea35ccda);
+
+            
+        
+        
+            
+
+            var marker_29d9d1db0d724fbebd189f91e3f9ed31 = L.marker(
+                [40.739086900000004,-73.9913755],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_e116b0543c02470d9274077db6f9e508 = L.popup({maxWidth: '300'});
+
+            
+                var html_3ec289837d3a407a955a2029a5cb1a3d = $('         <div id="html_3ec289837d3a407a955a2029a5cb1a3d"                 style="width: 100.0%; height: 100.0%;">                 8/11/15 WEST 19 STREET, 5 AVENUE street</div>                 ')[0];
+                popup_e116b0543c02470d9274077db6f9e508.setContent(html_3ec289837d3a407a955a2029a5cb1a3d);
+            
+
+            marker_29d9d1db0d724fbebd189f91e3f9ed31.bindPopup(popup_e116b0543c02470d9274077db6f9e508);
+
+            
+        
+        
+            
+
+            var marker_aa12e4134d83420f91446f5ceff560e2 = L.marker(
+                [40.734034,-73.99504940000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_5a120ace461d4e86a609cc97706d7ab2 = L.popup({maxWidth: '300'});
+
+            
+                var html_0b3ea330e57a4bb295b115e9edcee092 = $('         <div id="html_0b3ea330e57a4bb295b115e9edcee092"                 style="width: 100.0%; height: 100.0%;">                 8/11/15 WEST 11 STREET, 5 AVENUE street</div>                 ')[0];
+                popup_5a120ace461d4e86a609cc97706d7ab2.setContent(html_0b3ea330e57a4bb295b115e9edcee092);
+            
+
+            marker_aa12e4134d83420f91446f5ceff560e2.bindPopup(popup_5a120ace461d4e86a609cc97706d7ab2);
+
+            
+        
+        
+            
+
+            var marker_209a9d1fde05497eb58424258a6848b5 = L.marker(
+                [40.732603399999995,-73.9876815],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_2d8e48a3a96a46c980da219f267d4427 = L.popup({maxWidth: '300'});
+
+            
+                var html_e580e7c68d9445719cfe43185517ae36 = $('         <div id="html_e580e7c68d9445719cfe43185517ae36"                 style="width: 100.0%; height: 100.0%;">                 8/8/15 EAST 13 STREET, 3 AVENUE street</div>                 ')[0];
+                popup_2d8e48a3a96a46c980da219f267d4427.setContent(html_e580e7c68d9445719cfe43185517ae36);
+            
+
+            marker_209a9d1fde05497eb58424258a6848b5.bindPopup(popup_2d8e48a3a96a46c980da219f267d4427);
+
+            
+        
+        
+            
+
+            var marker_6441a904035c475c8c4c75bbd13b00b2 = L.marker(
+                [40.736019899999995,-73.9822683],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_06e26412c3904acdaf118e2421c7c98f = L.popup({maxWidth: '300'});
+
+            
+                var html_85cd88bfa6c647b0945d18e93d6c04d5 = $('         <div id="html_85cd88bfa6c647b0945d18e93d6c04d5"                 style="width: 100.0%; height: 100.0%;">                 8/8/15 EAST 20 STREET, 2 AVENUE shared</div>                 ')[0];
+                popup_06e26412c3904acdaf118e2421c7c98f.setContent(html_85cd88bfa6c647b0945d18e93d6c04d5);
+            
+
+            marker_6441a904035c475c8c4c75bbd13b00b2.bindPopup(popup_06e26412c3904acdaf118e2421c7c98f);
+
+            
+        
+        
+            
+
+            var marker_c8bde82a23704246ad925bf976ca2128 = L.marker(
+                [40.738504999999996,-73.9917978],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_aaa15ff8873f4e769bc35874c76d1341 = L.popup({maxWidth: '300'});
+
+            
+                var html_b1a6855ed2dd47bc899139973345f217 = $('         <div id="html_b1a6855ed2dd47bc899139973345f217"                 style="width: 100.0%; height: 100.0%;">                 8/7/15 5 AVENUE, WEST 18 STREET normal</div>                 ')[0];
+                popup_aaa15ff8873f4e769bc35874c76d1341.setContent(html_b1a6855ed2dd47bc899139973345f217);
+            
+
+            marker_c8bde82a23704246ad925bf976ca2128.bindPopup(popup_aaa15ff8873f4e769bc35874c76d1341);
+
+            
+        
+        
+            
+
+            var marker_bf0bc875cb5442d39066cf171b15021f = L.marker(
+                [40.735370399999994,-73.9899687],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_4f4f21d2a8884dfe8d7f6d4956e62961 = L.popup({maxWidth: '300'});
+
+            
+                var html_61f5c18fc8cc444d917cd0271b1faabc = $('         <div id="html_61f5c18fc8cc444d917cd0271b1faabc"                 style="width: 100.0%; height: 100.0%;">                 8/1/15 UNION SQUARE EAST, EAST 15 STREET shared</div>                 ')[0];
+                popup_4f4f21d2a8884dfe8d7f6d4956e62961.setContent(html_61f5c18fc8cc444d917cd0271b1faabc);
+            
+
+            marker_bf0bc875cb5442d39066cf171b15021f.bindPopup(popup_4f4f21d2a8884dfe8d7f6d4956e62961);
+
+            
+        
+        
+            
+
+            var marker_3f2d94de62ab4dfa9e349d94740a78cf = L.marker(
+                [40.735214,-73.9917152],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_669caa40a0a94365ac13ca67925010a8 = L.popup({maxWidth: '300'});
+
+            
+                var html_0c685d9d1da3446eb35f3d23a5cd6bfd = $('         <div id="html_0c685d9d1da3446eb35f3d23a5cd6bfd"                 style="width: 100.0%; height: 100.0%;">                 7/30/15 EAST 14 STREET, UNIVERSITY PLACE street</div>                 ')[0];
+                popup_669caa40a0a94365ac13ca67925010a8.setContent(html_0c685d9d1da3446eb35f3d23a5cd6bfd);
+            
+
+            marker_3f2d94de62ab4dfa9e349d94740a78cf.bindPopup(popup_669caa40a0a94365ac13ca67925010a8);
+
+            
+        
+        
+            
+
+            var marker_782448eabd324ac6966891717bf424f2 = L.marker(
+                [40.736019899999995,-73.9822683],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_8c214a9ae44b4f1fb4c86b31d6abe7c1 = L.popup({maxWidth: '300'});
+
+            
+                var html_45dcb983e7bc48fda9bf17bfa19ef08c = $('         <div id="html_45dcb983e7bc48fda9bf17bfa19ef08c"                 style="width: 100.0%; height: 100.0%;">                 7/28/15 2 AVENUE, EAST 20 STREET protected</div>                 ')[0];
+                popup_8c214a9ae44b4f1fb4c86b31d6abe7c1.setContent(html_45dcb983e7bc48fda9bf17bfa19ef08c);
+            
+
+            marker_782448eabd324ac6966891717bf424f2.bindPopup(popup_8c214a9ae44b4f1fb4c86b31d6abe7c1);
+
+            
+        
+        
+            
+
+            var marker_9df2951787934f728639a5d6f26b91bb = L.marker(
+                [40.7344344,-73.98990390000002],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_84ef40fbd2db4ce883f9acc24677207e = L.popup({maxWidth: '300'});
+
+            
+                var html_cc34c2e4eef94b8981efdccbe14ef3dc = $('         <div id="html_cc34c2e4eef94b8981efdccbe14ef3dc"                 style="width: 100.0%; height: 100.0%;">                 7/20/15 4 AVENUE, EAST 14 STREET street</div>                 ')[0];
+                popup_84ef40fbd2db4ce883f9acc24677207e.setContent(html_cc34c2e4eef94b8981efdccbe14ef3dc);
+            
+
+            marker_9df2951787934f728639a5d6f26b91bb.bindPopup(popup_84ef40fbd2db4ce883f9acc24677207e);
+
+            
+        
+        
+            
+
+            var marker_11d1f0ee37014931931c2fe1e53b781d = L.marker(
+                [40.735370399999994,-73.9899687],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_86c884ce3cc643b4a29b02db0b347bff = L.popup({maxWidth: '300'});
+
+            
+                var html_eab37fbc42d44ea6bbe653c4f017af01 = $('         <div id="html_eab37fbc42d44ea6bbe653c4f017af01"                 style="width: 100.0%; height: 100.0%;">                 7/20/15 UNION SQUARE EAST, EAST 15 STREET shared</div>                 ')[0];
+                popup_86c884ce3cc643b4a29b02db0b347bff.setContent(html_eab37fbc42d44ea6bbe653c4f017af01);
+            
+
+            marker_11d1f0ee37014931931c2fe1e53b781d.bindPopup(popup_86c884ce3cc643b4a29b02db0b347bff);
+
+            
+        
+        
+            
+
+            var marker_bb94a3af597a4a83aba8f183b83dd2d1 = L.marker(
+                [40.7327574,-73.9900269],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_a8d28153b9204e70a6f42c09e6e99aa6 = L.popup({maxWidth: '300'});
+
+            
+                var html_b7a89bd2bf2a4003b8a11c918501962e = $('         <div id="html_b7a89bd2bf2a4003b8a11c918501962e"                 style="width: 100.0%; height: 100.0%;">                 7/16/15 EAST 12 STREET, 4 AVENUE street</div>                 ')[0];
+                popup_a8d28153b9204e70a6f42c09e6e99aa6.setContent(html_b7a89bd2bf2a4003b8a11c918501962e);
+            
+
+            marker_bb94a3af597a4a83aba8f183b83dd2d1.bindPopup(popup_a8d28153b9204e70a6f42c09e6e99aa6);
+
+            
+        
+        
+            
+
+            var marker_ff9fb09d219c466ca7bf749ace9f5512 = L.marker(
+                [40.734034,-73.99504940000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_e7aab0f99e2741fea4f8c266739d2280 = L.popup({maxWidth: '300'});
+
+            
+                var html_fb65c5916f9a47af871f40c381dbe352 = $('         <div id="html_fb65c5916f9a47af871f40c381dbe352"                 style="width: 100.0%; height: 100.0%;">                 7/15/15 WEST 11 STREET, 5 AVENUE street</div>                 ')[0];
+                popup_e7aab0f99e2741fea4f8c266739d2280.setContent(html_fb65c5916f9a47af871f40c381dbe352);
+            
+
+            marker_ff9fb09d219c466ca7bf749ace9f5512.bindPopup(popup_e7aab0f99e2741fea4f8c266739d2280);
+
+            
+        
+        
+            
+
+            var marker_629e2df8736c4bec975d69bf01234d35 = L.marker(
+                [40.7365615,-73.98901590000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_11bdfb9e384c4c97946634a7e7aa425b = L.popup({maxWidth: '300'});
+
+            
+                var html_7ecfabcc11304d1fa5d83cb0e69084a5 = $('         <div id="html_7ecfabcc11304d1fa5d83cb0e69084a5"                 style="width: 100.0%; height: 100.0%;">                 7/15/15 PARK AVENUE SOUTH, EAST 17 STREET street</div>                 ')[0];
+                popup_11bdfb9e384c4c97946634a7e7aa425b.setContent(html_7ecfabcc11304d1fa5d83cb0e69084a5);
+            
+
+            marker_629e2df8736c4bec975d69bf01234d35.bindPopup(popup_11bdfb9e384c4c97946634a7e7aa425b);
+
+            
+        
+        
+            
+
+            var marker_7d3d75436d194487b1377e5e4f19ae2a = L.marker(
+                [40.732252700000004,-73.9963521],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_28877a6becd14aa0aa203883712f1f8f = L.popup({maxWidth: '300'});
+
+            
+                var html_81d49b7bc1594e68aa05e4ca39b6ca7d = $('         <div id="html_81d49b7bc1594e68aa05e4ca39b6ca7d"                 style="width: 100.0%; height: 100.0%;">                 7/4/15 WEST 8 STREET, 5 AVENUE street</div>                 ')[0];
+                popup_28877a6becd14aa0aa203883712f1f8f.setContent(html_81d49b7bc1594e68aa05e4ca39b6ca7d);
+            
+
+            marker_7d3d75436d194487b1377e5e4f19ae2a.bindPopup(popup_28877a6becd14aa0aa203883712f1f8f);
+
+            
+        
+        
+            
+
+            var marker_b365c96efb50478095881c09a7fe3f5d = L.marker(
+                [40.736019899999995,-73.9822683],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_16598642b92a41feafc8ce4991a1dc68 = L.popup({maxWidth: '300'});
+
+            
+                var html_a8fb12d1e9b145299c9e98ed1ce8ebdc = $('         <div id="html_a8fb12d1e9b145299c9e98ed1ce8ebdc"                 style="width: 100.0%; height: 100.0%;">                 7/4/15 2 AVENUE, EAST 20 STREET protected</div>                 ')[0];
+                popup_16598642b92a41feafc8ce4991a1dc68.setContent(html_a8fb12d1e9b145299c9e98ed1ce8ebdc);
+            
+
+            marker_b365c96efb50478095881c09a7fe3f5d.bindPopup(popup_16598642b92a41feafc8ce4991a1dc68);
+
+            
+        
+        
+            
+
+            var marker_631b972a833e4e90950569d8ff7b2e6e = L.marker(
+                [40.727866399999996,-73.9931449],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_c56ef4e9ef0d489e86fa2af399ca40dd = L.popup({maxWidth: '300'});
+
+            
+                var html_a8ea8cc0f8854e09b6249304726fc70c = $('         <div id="html_a8ea8cc0f8854e09b6249304726fc70c"                 style="width: 100.0%; height: 100.0%;">                 6/29/15 LAFAYETTE STREET, EAST 4 STREET protected</div>                 ')[0];
+                popup_c56ef4e9ef0d489e86fa2af399ca40dd.setContent(html_a8ea8cc0f8854e09b6249304726fc70c);
+            
+
+            marker_631b972a833e4e90950569d8ff7b2e6e.bindPopup(popup_c56ef4e9ef0d489e86fa2af399ca40dd);
+
+            
+        
+        
+            
+
+            var marker_69f53d9fdf5a43e080a223ea946f9b42 = L.marker(
+                [40.732252700000004,-73.9963521],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_d73e093aa5a945eb83d577dca4400ab2 = L.popup({maxWidth: '300'});
+
+            
+                var html_dab04a46e0924cc98c40d9abccc42da2 = $('         <div id="html_dab04a46e0924cc98c40d9abccc42da2"                 style="width: 100.0%; height: 100.0%;">                 6/25/15 5 AVENUE, WEST 8 STREET normal</div>                 ')[0];
+                popup_d73e093aa5a945eb83d577dca4400ab2.setContent(html_dab04a46e0924cc98c40d9abccc42da2);
+            
+
+            marker_69f53d9fdf5a43e080a223ea946f9b42.bindPopup(popup_d73e093aa5a945eb83d577dca4400ab2);
+
+            
+        
+        
+            
+
+            var marker_68ab0987be5048c8a8eb42508d7a62b8 = L.marker(
+                [40.73234779999999,-73.9849394],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_8810ce7eae924d999259e6b6036facbe = L.popup({maxWidth: '300'});
+
+            
+                var html_2a221643e26b438c98f6dcf4a250acbf = $('         <div id="html_2a221643e26b438c98f6dcf4a250acbf"                 style="width: 100.0%; height: 100.0%;">                 6/22/15 EAST 14 STREET, 2 AVENUE street</div>                 ')[0];
+                popup_8810ce7eae924d999259e6b6036facbe.setContent(html_2a221643e26b438c98f6dcf4a250acbf);
+            
+
+            marker_68ab0987be5048c8a8eb42508d7a62b8.bindPopup(popup_8810ce7eae924d999259e6b6036facbe);
+
+            
+        
+        
+            
+
+            var marker_c62ea09537be488db97a39f03eac3f6e = L.marker(
+                [40.7311655,-73.99192140000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_caad6751d1be48be841a86be51341acf = L.popup({maxWidth: '300'});
+
+            
+                var html_3c90f8b2094a4f96bcf04c8272d06203 = $('         <div id="html_3c90f8b2094a4f96bcf04c8272d06203"                 style="width: 100.0%; height: 100.0%;">                 6/19/15 EAST 9 STREET, BROADWAY normal</div>                 ')[0];
+                popup_caad6751d1be48be841a86be51341acf.setContent(html_3c90f8b2094a4f96bcf04c8272d06203);
+            
+
+            marker_c62ea09537be488db97a39f03eac3f6e.bindPopup(popup_caad6751d1be48be841a86be51341acf);
+
+            
+        
+        
+            
+
+            var marker_ec4cd06264304399b69fb6bfbf595d85 = L.marker(
+                [40.728596100000004,-73.98767149999999],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_1d427a52603d4f6a85e887f56703e16d = L.popup({maxWidth: '300'});
+
+            
+                var html_2378d34aca504f2987003ebb49941a03 = $('         <div id="html_2378d34aca504f2987003ebb49941a03"                 style="width: 100.0%; height: 100.0%;">                 6/17/15 SAINT MARKS PLACE, 2 AVENUE street</div>                 ')[0];
+                popup_1d427a52603d4f6a85e887f56703e16d.setContent(html_2378d34aca504f2987003ebb49941a03);
+            
+
+            marker_ec4cd06264304399b69fb6bfbf595d85.bindPopup(popup_1d427a52603d4f6a85e887f56703e16d);
+
+            
+        
+        
+            
+
+            var marker_74516fadac6f44aa99d7c20c2a13e19b = L.marker(
+                [40.7359879,-73.9894563],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_0828a52e56e842aa8d981a846dbd945a = L.popup({maxWidth: '300'});
+
+            
+                var html_b2f6ccb4e5ff49bf8bf1414d0a6c257a = $('         <div id="html_b2f6ccb4e5ff49bf8bf1414d0a6c257a"                 style="width: 100.0%; height: 100.0%;">                 6/15/15 UNION SQUARE EAST, EAST 16 STREET street</div>                 ')[0];
+                popup_0828a52e56e842aa8d981a846dbd945a.setContent(html_b2f6ccb4e5ff49bf8bf1414d0a6c257a);
+            
+
+            marker_74516fadac6f44aa99d7c20c2a13e19b.bindPopup(popup_0828a52e56e842aa8d981a846dbd945a);
+
+            
+        
+        
+            
+
+            var marker_a4fb0128bd794da7aa6efc88a155cccc = L.marker(
+                [40.7363771,-73.9849348],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_27ff04fa87c34715bb9c361faa662b7f = L.popup({maxWidth: '300'});
+
+            
+                var html_8bcde9c05c984967b982ab850c5b82c2 = $('         <div id="html_8bcde9c05c984967b982ab850c5b82c2"                 style="width: 100.0%; height: 100.0%;">                 6/10/15 EAST 19 STREET, 3 AVENUE street</div>                 ')[0];
+                popup_27ff04fa87c34715bb9c361faa662b7f.setContent(html_8bcde9c05c984967b982ab850c5b82c2);
+            
+
+            marker_a4fb0128bd794da7aa6efc88a155cccc.bindPopup(popup_27ff04fa87c34715bb9c361faa662b7f);
+
+            
+        
+        
+            
+
+            var marker_18049891bf264632ad66c57ae8d70a1f = L.marker(
+                [40.7364652,-73.9869628],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_b02625494ff04cf4951dae3043c6f421 = L.popup({maxWidth: '300'});
+
+            
+                var html_08283586633f4bc083b1bd48c911888e = $('         <div id="html_08283586633f4bc083b1bd48c911888e"                 style="width: 100.0%; height: 100.0%;">                 6/8/15 IRVING PLACE, EAST 18 STREET street</div>                 ')[0];
+                popup_b02625494ff04cf4951dae3043c6f421.setContent(html_08283586633f4bc083b1bd48c911888e);
+            
+
+            marker_18049891bf264632ad66c57ae8d70a1f.bindPopup(popup_b02625494ff04cf4951dae3043c6f421);
+
+            
+        
+        
+            
+
+            var marker_876d5dd80a85497593b5a9b072fe3001 = L.marker(
+                [40.73284829999999,-73.99591550000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_db4c7d2befa94e5f95fb7a771362889f = L.popup({maxWidth: '300'});
+
+            
+                var html_c83e58d8faff4779bf142a66f71ebeb9 = $('         <div id="html_c83e58d8faff4779bf142a66f71ebeb9"                 style="width: 100.0%; height: 100.0%;">                 6/1/15 5 AVENUE, EAST 9 STREET normal</div>                 ')[0];
+                popup_db4c7d2befa94e5f95fb7a771362889f.setContent(html_c83e58d8faff4779bf142a66f71ebeb9);
+            
+
+            marker_876d5dd80a85497593b5a9b072fe3001.bindPopup(popup_db4c7d2befa94e5f95fb7a771362889f);
+
+            
+        
+        
+            
+
+            var marker_3dd35b986b36415db30d0d675147b2c6 = L.marker(
+                [40.7324473,-73.991279],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_3a6e85e98bd841eb97576e5b5c269f4d = L.popup({maxWidth: '300'});
+
+            
+                var html_897fdd3a357a457ebb0e008f762dc7f5 = $('         <div id="html_897fdd3a357a457ebb0e008f762dc7f5"                 style="width: 100.0%; height: 100.0%;">                 5/30/15 BROADWAY, EAST 11 STREET street</div>                 ')[0];
+                popup_3a6e85e98bd841eb97576e5b5c269f4d.setContent(html_897fdd3a357a457ebb0e008f762dc7f5);
+            
+
+            marker_3dd35b986b36415db30d0d675147b2c6.bindPopup(popup_3a6e85e98bd841eb97576e5b5c269f4d);
+
+            
+        
+        
+            
+
+            var marker_1f108fde9d194a218b72f799160ee682 = L.marker(
+                [40.7342607,-73.9835497],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_058d4cee112241ddbdd10aadf9190718 = L.popup({maxWidth: '300'});
+
+            
+                var html_62309399d2884a1c857975c9430d355d = $('         <div id="html_62309399d2884a1c857975c9430d355d"                 style="width: 100.0%; height: 100.0%;">                 5/25/15 2 AVENUE, EAST 17 STREET protected</div>                 ')[0];
+                popup_058d4cee112241ddbdd10aadf9190718.setContent(html_62309399d2884a1c857975c9430d355d);
+            
+
+            marker_1f108fde9d194a218b72f799160ee682.bindPopup(popup_058d4cee112241ddbdd10aadf9190718);
+
+            
+        
+        
+            
+
+            var marker_85b623b676174bf7bfba3e577874925a = L.marker(
+                [40.7261864,-73.98942890000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_bb929077b92b440c832592feb4595914 = L.popup({maxWidth: '300'});
+
+            
+                var html_4e0b369643384cfd839c787596e5b193 = $('         <div id="html_4e0b369643384cfd839c787596e5b193"                 style="width: 100.0%; height: 100.0%;">                 5/22/15 2 AVENUE, EAST 4 STREET protected</div>                 ')[0];
+                popup_bb929077b92b440c832592feb4595914.setContent(html_4e0b369643384cfd839c787596e5b193);
+            
+
+            marker_85b623b676174bf7bfba3e577874925a.bindPopup(popup_bb929077b92b440c832592feb4595914);
+
+            
+        
+        
+            
+
+            var marker_d2cef04a48694a2cab50120c423731a7 = L.marker(
+                [40.7324473,-73.991279],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_153c180923ed4b47aff6d77cd4c1b6d9 = L.popup({maxWidth: '300'});
+
+            
+                var html_ce5659c6ebf245a1b08af6303176d631 = $('         <div id="html_ce5659c6ebf245a1b08af6303176d631"                 style="width: 100.0%; height: 100.0%;">                 5/21/15 BROADWAY, EAST 11 STREET street</div>                 ')[0];
+                popup_153c180923ed4b47aff6d77cd4c1b6d9.setContent(html_ce5659c6ebf245a1b08af6303176d631);
+            
+
+            marker_d2cef04a48694a2cab50120c423731a7.bindPopup(popup_153c180923ed4b47aff6d77cd4c1b6d9);
+
+            
+        
+        
+            
+
+            var marker_59379d85b9d947118743e822482f4ad5 = L.marker(
+                [40.73234779999999,-73.9849394],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_7242efe1ee1e4703aeb91b88a4323515 = L.popup({maxWidth: '300'});
+
+            
+                var html_b6436cd9f3864e5eadb6de4b51115493 = $('         <div id="html_b6436cd9f3864e5eadb6de4b51115493"                 style="width: 100.0%; height: 100.0%;">                 5/20/15 EAST 14 STREET, 2 AVENUE street</div>                 ')[0];
+                popup_7242efe1ee1e4703aeb91b88a4323515.setContent(html_b6436cd9f3864e5eadb6de4b51115493);
+            
+
+            marker_59379d85b9d947118743e822482f4ad5.bindPopup(popup_7242efe1ee1e4703aeb91b88a4323515);
+
+            
+        
+        
+            
+
+            var marker_d4391b4988064aeb9b7664d36805470b = L.marker(
+                [40.738504999999996,-73.9917978],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_d355e46e94ea4306a452a87d23aff641 = L.popup({maxWidth: '300'});
+
+            
+                var html_6441605b055c44978426dd2cb8b97209 = $('         <div id="html_6441605b055c44978426dd2cb8b97209"                 style="width: 100.0%; height: 100.0%;">                 5/20/15 WEST 18 STREET, 5 AVENUE street</div>                 ')[0];
+                popup_d355e46e94ea4306a452a87d23aff641.setContent(html_6441605b055c44978426dd2cb8b97209);
+            
+
+            marker_d4391b4988064aeb9b7664d36805470b.bindPopup(popup_d355e46e94ea4306a452a87d23aff641);
+
+            
+        
+        
+            
+
+            var marker_106a8f056d9d4b02a77e4d905e543a04 = L.marker(
+                [40.7344344,-73.98990390000002],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_f4756bea5cee474f92b76eb7a6fdd181 = L.popup({maxWidth: '300'});
+
+            
+                var html_a95cad36285a49659238dfb91374a209 = $('         <div id="html_a95cad36285a49659238dfb91374a209"                 style="width: 100.0%; height: 100.0%;">                 5/19/15 EAST 14 STREET, UNION SQUARE EAST street</div>                 ')[0];
+                popup_f4756bea5cee474f92b76eb7a6fdd181.setContent(html_a95cad36285a49659238dfb91374a209);
+            
+
+            marker_106a8f056d9d4b02a77e4d905e543a04.bindPopup(popup_f4756bea5cee474f92b76eb7a6fdd181);
+
+            
+        
+        
+            
+
+            var marker_4c6647c386f740728085ba6d5ca1aa58 = L.marker(
+                [40.7295792,-73.99326020000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_54868e7e46ab45a8b35bc04a5ebc97c1 = L.popup({maxWidth: '300'});
+
+            
+                var html_d5301d6f508a4270b54f5a4beebf0df1 = $('         <div id="html_d5301d6f508a4270b54f5a4beebf0df1"                 style="width: 100.0%; height: 100.0%;">                 5/15/15 BROADWAY, WAVERLY PLACE street</div>                 ')[0];
+                popup_54868e7e46ab45a8b35bc04a5ebc97c1.setContent(html_d5301d6f508a4270b54f5a4beebf0df1);
+            
+
+            marker_4c6647c386f740728085ba6d5ca1aa58.bindPopup(popup_54868e7e46ab45a8b35bc04a5ebc97c1);
+
+            
+        
+        
+            
+
+            var marker_78ff7ed1635345ce97372135a4041d13 = L.marker(
+                [40.7327574,-73.9900269],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_cfbbd276da80420299790f844aeb2952 = L.popup({maxWidth: '300'});
+
+            
+                var html_2bc19cf2ca6746139f926fcf04f28484 = $('         <div id="html_2bc19cf2ca6746139f926fcf04f28484"                 style="width: 100.0%; height: 100.0%;">                 5/14/15 4 AVENUE, EAST 12 STREET protected</div>                 ')[0];
+                popup_cfbbd276da80420299790f844aeb2952.setContent(html_2bc19cf2ca6746139f926fcf04f28484);
+            
+
+            marker_78ff7ed1635345ce97372135a4041d13.bindPopup(popup_cfbbd276da80420299790f844aeb2952);
+
+            
+        
+        
+            
+
+            var marker_eaa2bde1d6f84a96a822ab4a2a8ba87e = L.marker(
+                [40.737917700000004,-73.99222370000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_6468abe4b02b4219a17bc62dc95de169 = L.popup({maxWidth: '300'});
+
+            
+                var html_a52ab33844c747b48831880864936a36 = $('         <div id="html_a52ab33844c747b48831880864936a36"                 style="width: 100.0%; height: 100.0%;">                 5/9/15 WEST 17 STREET, 5 AVENUE street</div>                 ')[0];
+                popup_6468abe4b02b4219a17bc62dc95de169.setContent(html_a52ab33844c747b48831880864936a36);
+            
+
+            marker_eaa2bde1d6f84a96a822ab4a2a8ba87e.bindPopup(popup_6468abe4b02b4219a17bc62dc95de169);
+
+            
+        
+        
+            
+
+            var marker_0422246cd71d4a81bc924a90ecc4924a = L.marker(
+                [40.733292299999995,-73.98717990000002],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_43f4dcb4669e4eee8aef1f6727a814d7 = L.popup({maxWidth: '300'});
+
+            
+                var html_6b546976f9d048f4a5bbb60d12259ffd = $('         <div id="html_6b546976f9d048f4a5bbb60d12259ffd"                 style="width: 100.0%; height: 100.0%;">                 5/8/15 3 AVENUE, EAST 14 STREET street</div>                 ')[0];
+                popup_43f4dcb4669e4eee8aef1f6727a814d7.setContent(html_6b546976f9d048f4a5bbb60d12259ffd);
+            
+
+            marker_0422246cd71d4a81bc924a90ecc4924a.bindPopup(popup_43f4dcb4669e4eee8aef1f6727a814d7);
+
+            
+        
+        
+            
+
+            var marker_4d852e47dc564ce3bd7584fd79e898be = L.marker(
+                [40.7359879,-73.9894563],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_dbcb1890036b4d3591ff9a0b03813c31 = L.popup({maxWidth: '300'});
+
+            
+                var html_bc3449db11a649ab9cff3fa1a9d076be = $('         <div id="html_bc3449db11a649ab9cff3fa1a9d076be"                 style="width: 100.0%; height: 100.0%;">                 5/8/15 EAST 16 STREET, UNION SQUARE EAST street</div>                 ')[0];
+                popup_dbcb1890036b4d3591ff9a0b03813c31.setContent(html_bc3449db11a649ab9cff3fa1a9d076be);
+            
+
+            marker_4d852e47dc564ce3bd7584fd79e898be.bindPopup(popup_dbcb1890036b4d3591ff9a0b03813c31);
+
+            
+        
+        
+            
+
+            var marker_3a399c45b3cf463b94bd7bbbdefad17d = L.marker(
+                [40.7300068,-73.9873609],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_5c310d0df5b945b5961adadb80c4e5da = L.popup({maxWidth: '300'});
+
+            
+                var html_701e28cbcd154011b9d2f0c859a2f3a5 = $('         <div id="html_701e28cbcd154011b9d2f0c859a2f3a5"                 style="width: 100.0%; height: 100.0%;">                 5/8/15 EAST 10 STREET, STUYVESANT STREET normal</div>                 ')[0];
+                popup_5c310d0df5b945b5961adadb80c4e5da.setContent(html_701e28cbcd154011b9d2f0c859a2f3a5);
+            
+
+            marker_3a399c45b3cf463b94bd7bbbdefad17d.bindPopup(popup_5c310d0df5b945b5961adadb80c4e5da);
+
+            
+        
+        
+            
+
+            var marker_074afae402844920997dbdd54fd389e7 = L.marker(
+                [40.73038,-73.98637579999999],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_d5ba78f95ef64feab8407598f65dc6d6 = L.popup({maxWidth: '300'});
+
+            
+                var html_a89aa716e8ea40d29be565e16575075f = $('         <div id="html_a89aa716e8ea40d29be565e16575075f"                 style="width: 100.0%; height: 100.0%;">                 5/7/15 2 AVENUE, EAST 11 STREET protected</div>                 ')[0];
+                popup_d5ba78f95ef64feab8407598f65dc6d6.setContent(html_a89aa716e8ea40d29be565e16575075f);
+            
+
+            marker_074afae402844920997dbdd54fd389e7.bindPopup(popup_d5ba78f95ef64feab8407598f65dc6d6);
+
+            
+        
+        
+            
+
+            var marker_17df1176bf1844afb9d85ad7587c2090 = L.marker(
+                [40.7371325,-73.9903293],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_42e5c40589894cdb9b099aca98fda932 = L.popup({maxWidth: '300'});
+
+            
+                var html_f1714a8ff3db43d5a72e0cef594ec6bb = $('         <div id="html_f1714a8ff3db43d5a72e0cef594ec6bb"                 style="width: 100.0%; height: 100.0%;">                 5/2/15 EAST 17 STREET, UNION SQUARE WEST street</div>                 ')[0];
+                popup_42e5c40589894cdb9b099aca98fda932.setContent(html_f1714a8ff3db43d5a72e0cef594ec6bb);
+            
+
+            marker_17df1176bf1844afb9d85ad7587c2090.bindPopup(popup_42e5c40589894cdb9b099aca98fda932);
+
+            
+        
+        
+            
+
+            var marker_dc1343883be44ef48b500a66a7f43214 = L.marker(
+                [40.7291862,-73.98724920000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_20a6ccec04ff4a50898c9131aad830f1 = L.popup({maxWidth: '300'});
+
+            
+                var html_ce9c8b979e044809b6623f086e640c58 = $('         <div id="html_ce9c8b979e044809b6623f086e640c58"                 style="width: 100.0%; height: 100.0%;">                 5/2/15 2 AVENUE, EAST 9 STREET protected</div>                 ')[0];
+                popup_20a6ccec04ff4a50898c9131aad830f1.setContent(html_ce9c8b979e044809b6623f086e640c58);
+            
+
+            marker_dc1343883be44ef48b500a66a7f43214.bindPopup(popup_20a6ccec04ff4a50898c9131aad830f1);
+
+            
+        
+        
+            
+
+            var marker_aaa753c8cc4e4219af754a62ef13ae09 = L.marker(
+                [40.7255825,-73.9898692],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_cde6230f116f47d394590150388f985b = L.popup({maxWidth: '300'});
+
+            
+                var html_104b2f8b34ff45f483c6d20bb8cea1aa = $('         <div id="html_104b2f8b34ff45f483c6d20bb8cea1aa"                 style="width: 100.0%; height: 100.0%;">                 5/2/15 2 AVENUE, EAST 3 STREET protected</div>                 ')[0];
+                popup_cde6230f116f47d394590150388f985b.setContent(html_104b2f8b34ff45f483c6d20bb8cea1aa);
+            
+
+            marker_aaa753c8cc4e4219af754a62ef13ae09.bindPopup(popup_cde6230f116f47d394590150388f985b);
+
+            
+        
+        
+            
+
+            var marker_9d91e86433e8454dbacbaeae72b1716c = L.marker(
+                [40.7307234,-73.989053],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_f57108c23e854d15b207b1dcbf52ffbc = L.popup({maxWidth: '300'});
+
+            
+                var html_531db9f14e314a31a28d9cc2bae2653b = $('         <div id="html_531db9f14e314a31a28d9cc2bae2653b"                 style="width: 100.0%; height: 100.0%;">                 4/25/15 EAST 10 STREET, 3 AVENUE normal</div>                 ')[0];
+                popup_f57108c23e854d15b207b1dcbf52ffbc.setContent(html_531db9f14e314a31a28d9cc2bae2653b);
+            
+
+            marker_9d91e86433e8454dbacbaeae72b1716c.bindPopup(popup_f57108c23e854d15b207b1dcbf52ffbc);
+
+            
+        
+        
+            
+
+            var marker_89b1c236bada4438b1e57cda1bf2c318 = L.marker(
+                [40.733292299999995,-73.98717990000002],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_96f2a0f3398a480586a7f13fe2590781 = L.popup({maxWidth: '300'});
+
+            
+                var html_cf490697cd3d4b40b789ae3b5f9dd5be = $('         <div id="html_cf490697cd3d4b40b789ae3b5f9dd5be"                 style="width: 100.0%; height: 100.0%;">                 4/24/15 EAST 14 STREET, 3 AVENUE street</div>                 ')[0];
+                popup_96f2a0f3398a480586a7f13fe2590781.setContent(html_cf490697cd3d4b40b789ae3b5f9dd5be);
+            
+
+            marker_89b1c236bada4438b1e57cda1bf2c318.bindPopup(popup_96f2a0f3398a480586a7f13fe2590781);
+
+            
+        
+        
+            
+
+            var marker_cf1dbd9cb6bb4dca9b677bd10c5ede94 = L.marker(
+                [40.7295792,-73.99326020000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_077121f454784130875c15ea6853f874 = L.popup({maxWidth: '300'});
+
+            
+                var html_4093ba2c96854057aa0364c8bb9597b4 = $('         <div id="html_4093ba2c96854057aa0364c8bb9597b4"                 style="width: 100.0%; height: 100.0%;">                 4/24/15 BROADWAY, WAVERLY PLACE street</div>                 ')[0];
+                popup_077121f454784130875c15ea6853f874.setContent(html_4093ba2c96854057aa0364c8bb9597b4);
+            
+
+            marker_cf1dbd9cb6bb4dca9b677bd10c5ede94.bindPopup(popup_077121f454784130875c15ea6853f874);
+
+            
+        
+        
+            
+
+            var marker_0dd09d2ae88040679e234966af07ce9d = L.marker(
+                [40.735214,-73.9917152],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_c49ff9bf63ea41589bb05a2a548eccbd = L.popup({maxWidth: '300'});
+
+            
+                var html_e1c001ee68084e37bd59d52cfb71b659 = $('         <div id="html_e1c001ee68084e37bd59d52cfb71b659"                 style="width: 100.0%; height: 100.0%;">                 4/23/15 EAST 14 STREET, UNION SQUARE WEST street</div>                 ')[0];
+                popup_c49ff9bf63ea41589bb05a2a548eccbd.setContent(html_e1c001ee68084e37bd59d52cfb71b659);
+            
+
+            marker_0dd09d2ae88040679e234966af07ce9d.bindPopup(popup_c49ff9bf63ea41589bb05a2a548eccbd);
+
+            
+        
+        
+            
+
+            var marker_540333bbadc14a78af492c9cc2d226dc = L.marker(
+                [40.732252700000004,-73.9963521],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_6bc0951cb69646d8bf3a26b9b0a14ea4 = L.popup({maxWidth: '300'});
+
+            
+                var html_4aa4809709ea495a8001245ca1fa67e8 = $('         <div id="html_4aa4809709ea495a8001245ca1fa67e8"                 style="width: 100.0%; height: 100.0%;">                 4/21/15 WEST 8 STREET, 5 AVENUE street</div>                 ')[0];
+                popup_6bc0951cb69646d8bf3a26b9b0a14ea4.setContent(html_4aa4809709ea495a8001245ca1fa67e8);
+            
+
+            marker_540333bbadc14a78af492c9cc2d226dc.bindPopup(popup_6bc0951cb69646d8bf3a26b9b0a14ea4);
+
+            
+        
+        
+            
+
+            var marker_1fdc667c6c404587abb946c73782e5fd = L.marker(
+                [40.733978799999996,-73.9909432],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_d3d7864dcae94ad198b194c7e8bff8d0 = L.popup({maxWidth: '300'});
+
+            
+                var html_583aa6403ba342f59cdc9fbf308fb1c9 = $('         <div id="html_583aa6403ba342f59cdc9fbf308fb1c9"                 style="width: 100.0%; height: 100.0%;">                 4/18/15 EAST 13 STREET, BROADWAY street</div>                 ')[0];
+                popup_d3d7864dcae94ad198b194c7e8bff8d0.setContent(html_583aa6403ba342f59cdc9fbf308fb1c9);
+            
+
+            marker_1fdc667c6c404587abb946c73782e5fd.bindPopup(popup_d3d7864dcae94ad198b194c7e8bff8d0);
+
+            
+        
+        
+            
+
+            var marker_da0b19fec7c448b2811241a48ebf4112 = L.marker(
+                [40.734034,-73.99504940000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_da1e5146e116457282ef65c283c323c9 = L.popup({maxWidth: '300'});
+
+            
+                var html_4242b0d1de5c482ab7a81046953a23f6 = $('         <div id="html_4242b0d1de5c482ab7a81046953a23f6"                 style="width: 100.0%; height: 100.0%;">                 3/25/15 5 AVENUE, EAST 11 STREET normal</div>                 ')[0];
+                popup_da1e5146e116457282ef65c283c323c9.setContent(html_4242b0d1de5c482ab7a81046953a23f6);
+            
+
+            marker_da0b19fec7c448b2811241a48ebf4112.bindPopup(popup_da1e5146e116457282ef65c283c323c9);
+
+            
+        
+        
+            
+
+            var marker_6349b2cc446d4d00b6a36594e6258dd2 = L.marker(
+                [40.7364652,-73.9869628],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_dfdea4477e6b40e7b7750e9378dbb3da = L.popup({maxWidth: '300'});
+
+            
+                var html_c65909a0e3b54fd9b271fb3bebed7a42 = $('         <div id="html_c65909a0e3b54fd9b271fb3bebed7a42"                 style="width: 100.0%; height: 100.0%;">                 3/24/15 EAST 18 STREET, IRVING PLACE street</div>                 ')[0];
+                popup_dfdea4477e6b40e7b7750e9378dbb3da.setContent(html_c65909a0e3b54fd9b271fb3bebed7a42);
+            
+
+            marker_6349b2cc446d4d00b6a36594e6258dd2.bindPopup(popup_dfdea4477e6b40e7b7750e9378dbb3da);
+
+            
+        
+        
+            
+
+            var marker_0f73a387bca44facb81bf83d97e909ce = L.marker(
+                [40.73234779999999,-73.9849394],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_892403b24c4a462fbfb21b22086201fd = L.popup({maxWidth: '300'});
+
+            
+                var html_fa97e95537e44455acde353e45213a9c = $('         <div id="html_fa97e95537e44455acde353e45213a9c"                 style="width: 100.0%; height: 100.0%;">                 3/14/15 EAST 14 STREET, 2 AVENUE street</div>                 ')[0];
+                popup_892403b24c4a462fbfb21b22086201fd.setContent(html_fa97e95537e44455acde353e45213a9c);
+            
+
+            marker_0f73a387bca44facb81bf83d97e909ce.bindPopup(popup_892403b24c4a462fbfb21b22086201fd);
+
+            
+        
+        
+            
+
+            var marker_dfc7e2306ef24aa28642f0e84b2fad87 = L.marker(
+                [40.7365615,-73.98901590000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_bd5fce2c0d85465e934f6d8a54d3f487 = L.popup({maxWidth: '300'});
+
+            
+                var html_14f71e93587c4cf98af17d84d4e60cfe = $('         <div id="html_14f71e93587c4cf98af17d84d4e60cfe"                 style="width: 100.0%; height: 100.0%;">                 2/8/15 UNION SQUARE EAST, EAST 17 STREET street</div>                 ')[0];
+                popup_bd5fce2c0d85465e934f6d8a54d3f487.setContent(html_14f71e93587c4cf98af17d84d4e60cfe);
+            
+
+            marker_dfc7e2306ef24aa28642f0e84b2fad87.bindPopup(popup_bd5fce2c0d85465e934f6d8a54d3f487);
+
+            
+        
+        
+            
+
+            var marker_ea5eaf11112b4187813ab65094834671 = L.marker(
+                [40.7310195,-73.9859102],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_a1d780cf42a7420691a253d14acefb40 = L.popup({maxWidth: '300'});
+
+            
+                var html_293edae959814120bd2df7e6da92d08f = $('         <div id="html_293edae959814120bd2df7e6da92d08f"                 style="width: 100.0%; height: 100.0%;">                 2/7/15 EAST 12 STREET, 2 AVENUE street</div>                 ')[0];
+                popup_a1d780cf42a7420691a253d14acefb40.setContent(html_293edae959814120bd2df7e6da92d08f);
+            
+
+            marker_ea5eaf11112b4187813ab65094834671.bindPopup(popup_a1d780cf42a7420691a253d14acefb40);
+
+            
+        
+        
+            
+
+            var marker_a42e204cc7ab4c0f8d4edd0b8aa6846e = L.marker(
+                [40.7346179,-73.98621259999999],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_7c186e8e00e14b458eceb4517758b3fa = L.popup({maxWidth: '300'});
+
+            
+                var html_d6c9a30b0bff4b25ace6c2bf8b6f3b81 = $('         <div id="html_d6c9a30b0bff4b25ace6c2bf8b6f3b81"                 style="width: 100.0%; height: 100.0%;">                 2/4/15 3 AVENUE, EAST 16 STREET street</div>                 ')[0];
+                popup_7c186e8e00e14b458eceb4517758b3fa.setContent(html_d6c9a30b0bff4b25ace6c2bf8b6f3b81);
+            
+
+            marker_a42e204cc7ab4c0f8d4edd0b8aa6846e.bindPopup(popup_7c186e8e00e14b458eceb4517758b3fa);
+
+            
+        
+        
+            
+
+            var marker_6cde5f91ff9b467abb76d58bcde5781e = L.marker(
+                [40.7346179,-73.98621259999999],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_8b460405e3d1435bb41446f062d9aaec = L.popup({maxWidth: '300'});
+
+            
+                var html_0e21d807612e4d8eacd5ec4629466b00 = $('         <div id="html_0e21d807612e4d8eacd5ec4629466b00"                 style="width: 100.0%; height: 100.0%;">                 1/30/15 3 AVENUE, EAST 16 STREET street</div>                 ')[0];
+                popup_8b460405e3d1435bb41446f062d9aaec.setContent(html_0e21d807612e4d8eacd5ec4629466b00);
+            
+
+            marker_6cde5f91ff9b467abb76d58bcde5781e.bindPopup(popup_8b460405e3d1435bb41446f062d9aaec);
+
+            
+        
+        
+            
+
+            var marker_8da0d407dfa246a69057c2894631af73 = L.marker(
+                [40.7267792,-73.9889851],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_e0127fd759e54bedabc99c7a537f5ad0 = L.popup({maxWidth: '300'});
+
+            
+                var html_f13a5c51a0c24f7eba92573a4597e725 = $('         <div id="html_f13a5c51a0c24f7eba92573a4597e725"                 style="width: 100.0%; height: 100.0%;">                 1/26/15 EAST 5 STREET, 2 AVENUE street</div>                 ')[0];
+                popup_e0127fd759e54bedabc99c7a537f5ad0.setContent(html_f13a5c51a0c24f7eba92573a4597e725);
+            
+
+            marker_8da0d407dfa246a69057c2894631af73.bindPopup(popup_e0127fd759e54bedabc99c7a537f5ad0);
+
+            
+        
+        
+            
+
+            var marker_4f989a16f2cf4085ac55263ceaceee8e = L.marker(
+                [40.733978799999996,-73.9909432],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_7d4244ee96a44174a2cdeb516761de57 = L.popup({maxWidth: '300'});
+
+            
+                var html_4589be12fe36457399520250ae9ce56e = $('         <div id="html_4589be12fe36457399520250ae9ce56e"                 style="width: 100.0%; height: 100.0%;">                 1/13/15 EAST 13 STREET, BROADWAY street</div>                 ')[0];
+                popup_7d4244ee96a44174a2cdeb516761de57.setContent(html_4589be12fe36457399520250ae9ce56e);
+            
+
+            marker_4f989a16f2cf4085ac55263ceaceee8e.bindPopup(popup_7d4244ee96a44174a2cdeb516761de57);
+
+            
+        
+        
+            
+
+            var marker_0bb3a9e2eefd48849c0ab60a91d63b4f = L.marker(
+                [40.7305919,-73.9924085],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_406197807d2c44fa86663e6b37863d3d = L.popup({maxWidth: '300'});
+
+            
+                var html_18b3140b0870471e9556326eb1a8e350 = $('         <div id="html_18b3140b0870471e9556326eb1a8e350"                 style="width: 100.0%; height: 100.0%;">                 12/24/15 BROADWAY, EAST 8 STREET street</div>                 ')[0];
+                popup_406197807d2c44fa86663e6b37863d3d.setContent(html_18b3140b0870471e9556326eb1a8e350);
+            
+
+            marker_0bb3a9e2eefd48849c0ab60a91d63b4f.bindPopup(popup_406197807d2c44fa86663e6b37863d3d);
+
+            
+        
+        
+            
+
+            var marker_ca6cae0b3f1043c3a53002d9715ec577 = L.marker(
+                [40.737917700000004,-73.99222370000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_5f0866b7c6a24f5c9546161780169910 = L.popup({maxWidth: '300'});
+
+            
+                var html_e4f61c2599c241c6a727309d6ac1493e = $('         <div id="html_e4f61c2599c241c6a727309d6ac1493e"                 style="width: 100.0%; height: 100.0%;">                 9/3/15 EAST 17 STREET, 5 AVENUE street</div>                 ')[0];
+                popup_5f0866b7c6a24f5c9546161780169910.setContent(html_e4f61c2599c241c6a727309d6ac1493e);
+            
+
+            marker_ca6cae0b3f1043c3a53002d9715ec577.bindPopup(popup_5f0866b7c6a24f5c9546161780169910);
+
+            
+        
+        
+            
+
+            var marker_fda357660c904e4793c413ed50038bcc = L.marker(
+                [40.7311655,-73.99192140000001],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_0d87089898644879800c6954aaad488b = L.popup({maxWidth: '300'});
+
+            
+                var html_a19e33f071e4497e9afc9b421549d81c = $('         <div id="html_a19e33f071e4497e9afc9b421549d81c"                 style="width: 100.0%; height: 100.0%;">                 6/5/15 BROADWAY, EAST 9 STREET street</div>                 ')[0];
+                popup_0d87089898644879800c6954aaad488b.setContent(html_a19e33f071e4497e9afc9b421549d81c);
+            
+
+            marker_fda357660c904e4793c413ed50038bcc.bindPopup(popup_0d87089898644879800c6954aaad488b);
+
+            
+        
+        
+            
+
+            var marker_e15fc10ee7614b129f2b4ed52b595caa = L.marker(
+                [40.7344344,-73.98990390000002],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_b5bb82edc53c4ed3be58ce123307870a = L.popup({maxWidth: '300'});
+
+            
+                var html_4e0d22263c874417b9d7bee58d133af5 = $('         <div id="html_4e0d22263c874417b9d7bee58d133af5"                 style="width: 100.0%; height: 100.0%;">                 7/31/15 EAST 14 STREET, 4 AVENUE street</div>                 ')[0];
+                popup_b5bb82edc53c4ed3be58ce123307870a.setContent(html_4e0d22263c874417b9d7bee58d133af5);
+            
+
+            marker_e15fc10ee7614b129f2b4ed52b595caa.bindPopup(popup_b5bb82edc53c4ed3be58ce123307870a);
+
+            
+        
+        
+            
+
+            var marker_fc36e9bc356c4b97b9803591c4495cb8 = L.marker(
+                [40.7307234,-73.989053],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_c8a01442666345daa35257aae7b5823f = L.popup({maxWidth: '300'});
+
+            
+                var html_c25d9d3f875a4105b812013005d2a7cd = $('         <div id="html_c25d9d3f875a4105b812013005d2a7cd"                 style="width: 100.0%; height: 100.0%;">                 4/21/15 EAST 10 STREET, 3 AVENUE normal</div>                 ')[0];
+                popup_c8a01442666345daa35257aae7b5823f.setContent(html_c25d9d3f875a4105b812013005d2a7cd);
+            
+
+            marker_fc36e9bc356c4b97b9803591c4495cb8.bindPopup(popup_c8a01442666345daa35257aae7b5823f);
+
+            
+        
+        
+            
+
+            var marker_52ba9a90c3de4cf2b6652ee992a774d4 = L.marker(
+                [40.727975799999996,-73.988119],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(marker_cluster_666229e224344bb18dd0c610db5b4faa);
+            
+        
+            
+            var popup_113964ffc376401b836b4f102fc5e737 = L.popup({maxWidth: '300'});
+
+            
+                var html_b5a7f727f8904b98af6376365cdb3971 = $('         <div id="html_b5a7f727f8904b98af6376365cdb3971"                 style="width: 100.0%; height: 100.0%;">                 6/21/15 2 AVENUE, EAST 7 STREET protected</div>                 ')[0];
+                popup_113964ffc376401b836b4f102fc5e737.setContent(html_b5a7f727f8904b98af6376365cdb3971);
+            
+
+            marker_52ba9a90c3de4cf2b6652ee992a774d4.bindPopup(popup_113964ffc376401b836b4f102fc5e737);
+
+            
+        
+        
+            
+                var geo_json_fc2ddcc4ee3f462fb94c0a0025dbce8c = L.geoJson(
+                    {"features": [{"geometry": {"coordinates": [[[-73.97983074188232, 40.734997780748], [-73.98448689149158, 40.73696655420955], [-73.98410088945143, 40.737551138821], [-73.98648238418126, 40.73854224491512], [-73.9868683862214, 40.73800637568796], [-73.99098861335528, 40.73972989238724], [-73.997061252594, 40.731438198013336], [-73.9956240842838, 40.73075450279247], [-73.99658908938417, 40.72953493834445], [-73.99334942940438, 40.72790885241375], [-73.99373543144452, 40.727290670985546], [-73.99193293977491, 40.72641379406837], [-73.99274802444005, 40.72420144368538], [-73.98862779730618, 40.72293316385307], [-73.97983074188232, 40.734997780748]]], "type": "Polygon"}, "properties": {"direction": "", "fill": "#ffcc5f", "fill-opacity": 0.3, "lane-type": "", "stroke": "#434343", "stroke-opacity": 1, "stroke-width": 2, "style": {"color": "black", "fillColor": "yellow", "fillOpacity": 0.2, "opactiy": 1, "weight": 1}}, "type": "Feature"}], "type": "FeatureCollection"})
+                    .addTo(map_37c05162c76347bd8a7d20a0d03365b0);
+                geo_json_fc2ddcc4ee3f462fb94c0a0025dbce8c.setStyle(function(feature) {return feature.properties.style;});
+            
+        
+            
+                var geo_json_b0fe50e2e2184890ab855b80cd4999f9 = L.geoJson(
+                    {"features": [{"geometry": {"coordinates": [[-73.9822769165039, 40.735941649217736], [-73.99077415466309, 40.7243479598743]], "type": "LineString"}, "properties": {"direction": "southbound", "lane-type": "protected", "stroke": "#00ff00", "stroke-opacity": 1, "stroke-width": 2, "style": {"color": "green", "fillColor": "blue", "fillOpacity": 0.6, "opactiy": 1, "weight": 5}}, "type": "Feature"}, {"geometry": {"coordinates": [[-73.9936602115631, 40.72735633420242], [-73.99146616458893, 40.72985643371799], [-73.99108529090881, 40.73005968971253], [-73.99068832397461, 40.73058408731124], [-73.9905434846878, 40.73081173149403], [-73.99044156074524, 40.73096620388881], [-73.990398645401, 40.731108480777266], [-73.99007141590118, 40.732701961143576]], "type": "LineString"}, "properties": {"direction": "northbound", "lane-type": "protected", "stroke": "#00ff00", "stroke-opacity": 1, "stroke-width": 2, "style": {"color": "green", "fillColor": "blue", "fillOpacity": 0.6, "opactiy": 1, "weight": 5}}, "type": "Feature"}, {"geometry": {"coordinates": [[-73.98971199989317, 40.73915272763701], [-73.99030208587646, 40.73711228816394]], "type": "LineString"}, "properties": {"direction": "southbound", "lane-type": "protected", "stroke": "#00ff00", "stroke-opacity": 1, "stroke-width": 2, "style": {"color": "green", "fillColor": "blue", "fillOpacity": 0.6, "opactiy": 1, "weight": 5}}, "type": "Feature"}, {"geometry": {"coordinates": [[-73.99030208587646, 40.737104158797855], [-73.9902913570404, 40.73707164132352], [-73.98913264274597, 40.736592006730966]], "type": "LineString"}, "properties": {"direction": "eastbound", "lane-type": "protected", "stroke": "#00ff00", "stroke-opacity": 1, "stroke-width": 2, "style": {"color": "green", "fillColor": "blue", "fillOpacity": 0.6, "opactiy": 1, "weight": 5}}, "type": "Feature"}, {"geometry": {"coordinates": [[-73.9885640144348, 40.723010409239585], [-73.98847281932831, 40.72332345541451], [-73.98621439933777, 40.72643350950998], [-73.98490011692047, 40.728222232959524], [-73.98258805274963, 40.73138083854372], [-73.98076951503752, 40.73384013804089], [-73.97990584373474, 40.73503520282804]], "type": "LineString"}, "properties": {"direction": "northbound", "lane-type": "protected", "stroke": "#00ff00", "stroke-opacity": 1, "stroke-width": 2, "style": {"color": "green", "fillColor": "blue", "fillOpacity": 0.6, "opactiy": 1, "weight": 5}}, "type": "Feature"}], "type": "FeatureCollection"})
+                    .addTo(map_37c05162c76347bd8a7d20a0d03365b0);
+                geo_json_b0fe50e2e2184890ab855b80cd4999f9.setStyle(function(feature) {return feature.properties.style;});
+            
+        
+            
+                var geo_json_709194e713ea4111b653c2eff979c4c7 = L.geoJson(
+                    {"features": [{"geometry": {"coordinates": [[-73.99078488349915, 40.72433982894862], [-73.99096727371216, 40.724047114962126], [-73.9910101890564, 40.723689351674786]], "type": "LineString"}, "properties": {"direction": "southbound", "lane-type": "normal", "stroke": "#00ffff", "stroke-opacity": 1, "stroke-width": 2, "style": {"color": "cyan", "fillColor": "blue", "fillOpacity": 0.6, "opactiy": 1, "weight": 5}}, "type": "Feature"}, {"geometry": {"coordinates": [[-73.990039229393, 40.73280358487243], [-73.98991048336029, 40.73340112925855], [-73.98986220359802, 40.73399866827817], [-73.9899480342865, 40.734388894945276]], "type": "LineString"}, "properties": {"direction": "northbound", "lane-type": "normal", "stroke": "#00ffff", "stroke-opacity": 1, "stroke-width": 2, "style": {"color": "cyan", "fillColor": "blue", "fillOpacity": 0.6, "opactiy": 1, "weight": 5}}, "type": "Feature"}, {"geometry": {"coordinates": [[-73.98915410041809, 40.73660013615965], [-73.99002313613892, 40.73540509948313]], "type": "LineString"}, "properties": {"direction": "southbound", "lane-type": "normal", "stroke": "#00ffff", "stroke-opacity": 1, "stroke-width": 2, "style": {"color": "cyan", "fillColor": "blue", "fillOpacity": 0.6, "opactiy": 1, "weight": 5}}, "type": "Feature"}, {"geometry": {"coordinates": [[-73.9909029006958, 40.739648601880326], [-73.99693250656128, 40.73145400909696]], "type": "LineString"}, "properties": {"direction": "southbound", "lane-type": "normal", "stroke": "#00ffff", "stroke-opacity": 1, "stroke-width": 2, "style": {"color": "cyan", "fillColor": "blue", "fillOpacity": 0.6, "opactiy": 1, "weight": 5}}, "type": "Feature"}, {"geometry": {"coordinates": [[-73.99559140205383, 40.73345397306165], [-73.98441195487976, 40.728762905812104]], "type": "LineString"}, "properties": {"direction": "eastbound", "lane-type": "normal", "stroke": "#00ffff", "stroke-opacity": 1, "stroke-width": 2, "style": {"color": "cyan", "fillColor": "blue", "fillOpacity": 0.6, "opactiy": 1, "weight": 5}}, "type": "Feature"}, {"geometry": {"coordinates": [[-73.98481965065002, 40.728185645916064], [-73.99602055549622, 40.73286862397745]], "type": "LineString"}, "properties": {"direction": "westbound", "lane-type": "normal", "stroke": "#00ffff", "stroke-opacity": 1, "stroke-width": 2, "style": {"color": "cyan", "fillColor": "blue", "fillOpacity": 0.6, "opactiy": 1, "weight": 5}}, "type": "Feature"}, {"geometry": {"coordinates": [[-73.99558067321777, 40.73075482052134], [-73.99658918380737, 40.72956780913897]], "type": "LineString"}, "properties": {"direction": "northbound", "lane-type": "normal", "stroke": "#00ffff", "stroke-opacity": 1, "stroke-width": 2, "style": {"color": "cyan", "fillColor": "blue", "fillOpacity": 0.6, "opactiy": 1, "weight": 5}}, "type": "Feature"}, {"geometry": {"coordinates": [[-73.99217963218689, 40.725730202803845], [-73.99030208587646, 40.724884598773755], [-73.98790955543518, 40.72394141237283]], "type": "LineString"}, "properties": {"direction": "eastbound", "lane-type": "normal", "stroke": "#00ffff", "stroke-opacity": 1, "stroke-width": 2, "style": {"color": "cyan", "fillColor": "blue", "fillOpacity": 0.6, "opactiy": 1, "weight": 5}}, "type": "Feature"}, {"geometry": {"coordinates": [[-73.9883816242218, 40.72327466909449], [-73.99219036102294, 40.724868337052484]], "type": "LineString"}, "properties": {"direction": "westbound", "lane-type": "normal", "stroke": "#00ffff", "stroke-opacity": 1, "stroke-width": 2, "style": {"color": "cyan", "fillColor": "blue", "fillOpacity": 0.6, "opactiy": 1, "weight": 5}}, "type": "Feature"}, {"geometry": {"coordinates": [[-73.99090826511383, 40.73964047282417], [-73.9845621585846, 40.73697408880516]], "type": "LineString"}, "properties": {"direction": "eastbound", "lane-type": "normal", "stroke": "#00ffff", "stroke-opacity": 1, "stroke-width": 2, "style": {"color": "cyan", "fillColor": "blue", "fillOpacity": 0.6, "opactiy": 1, "weight": 5}}, "type": "Feature"}, {"geometry": {"coordinates": [[-73.98222327232361, 40.73599042625176], [-73.97993266582489, 40.735027073208116]], "type": "LineString"}, "properties": {"direction": "eastbound", "lane-type": "normal", "stroke": "#00ffff", "stroke-opacity": 1, "stroke-width": 2, "style": {"color": "cyan", "fillColor": "blue", "fillOpacity": 0.6, "opactiy": 1, "weight": 5}}, "type": "Feature"}], "type": "FeatureCollection"})
+                    .addTo(map_37c05162c76347bd8a7d20a0d03365b0);
+                geo_json_709194e713ea4111b653c2eff979c4c7.setStyle(function(feature) {return feature.properties.style;});
+            
+        
+            
+                var geo_json_125bd983545049a38c8e4bf4a11ae049 = L.geoJson(
+                    {"features": [{"geometry": {"coordinates": [[-73.99004459381104, 40.73538884033272], [-73.99022698402405, 40.73516121180963], [-73.99048447608948, 40.73498236028083], [-73.99069905281065, 40.73487667506057]], "type": "LineString"}, "properties": {"direction": "southbound", "lane-type": "shared", "stroke": "#ff00ff", "stroke-opacity": 1, "stroke-width": 2, "style": {"color": "magenta", "fillColor": "blue", "fillOpacity": 0.6, "opactiy": 1, "weight": 5}}, "type": "Feature"}, {"geometry": {"coordinates": [[-73.99271607398987, 40.73738868602021], [-73.99081707000732, 40.736583877301285]], "type": "LineString"}, "properties": {"direction": "eastbound", "lane-type": "shared", "stroke": "#ff00ff", "stroke-opacity": 1, "stroke-width": 2, "style": {"color": "magenta", "fillColor": "blue", "fillOpacity": 0.6, "opactiy": 1, "weight": 5}}, "type": "Feature"}, {"geometry": {"coordinates": [[-73.99129986763, 40.73590913117518], [-73.99322032928467, 40.736697689226354]], "type": "LineString"}, "properties": {"direction": "westbound", "lane-type": "shared", "stroke": "#ff00ff", "stroke-opacity": 1, "stroke-width": 2, "style": {"color": "magenta", "fillColor": "blue", "fillOpacity": 0.6, "opactiy": 1, "weight": 5}}, "type": "Feature"}, {"geometry": {"coordinates": [[-73.99693250656128, 40.7314296189215], [-73.99560213088989, 40.73075482052134]], "type": "LineString"}, "properties": {"direction": "westbound", "lane-type": "shared", "stroke": "#ff00ff", "stroke-opacity": 1, "stroke-width": 2, "style": {"color": "magenta", "fillColor": "blue", "fillOpacity": 0.6, "opactiy": 1, "weight": 5}}, "type": "Feature"}, {"geometry": {"coordinates": [[-73.99206161499023, 40.72560824134718], [-73.99258732795715, 40.724169079279605]], "type": "LineString"}, "properties": {"direction": "northbound, southbound", "lane-type": "shared", "stroke": "#ff00ff", "stroke-opacity": 1, "stroke-width": 2, "style": {"color": "magenta", "fillColor": "blue", "fillOpacity": 0.6, "opactiy": 1, "weight": 5}}, "type": "Feature"}, {"geometry": {"coordinates": [[-73.98446559906006, 40.73692937718646], [-73.98231983184813, 40.736031073752805]], "type": "LineString"}, "properties": {"direction": "eastbound", "lane-type": "shared", "stroke": "#ff00ff", "stroke-opacity": 1, "stroke-width": 2, "style": {"color": "magenta", "fillColor": "blue", "fillOpacity": 0.6, "opactiy": 1, "weight": 5}}, "type": "Feature"}], "type": "FeatureCollection"})
+                    .addTo(map_37c05162c76347bd8a7d20a0d03365b0);
+                geo_json_125bd983545049a38c8e4bf4a11ae049.setStyle(function(feature) {return feature.properties.style;});
+            
+        
+            
+            var layer_control_564c50eecffd402f807a9f5ffc81ee6c = {
+                base_layers : { "openstreetmap" : tile_layer_ebf2f8ba241a4ef199a9700d653d7d00, },
+                overlays : { "macro_element_fc2ddcc4ee3f462fb94c0a0025dbce8c" : geo_json_fc2ddcc4ee3f462fb94c0a0025dbce8c,"macro_element_b0fe50e2e2184890ab855b80cd4999f9" : geo_json_b0fe50e2e2184890ab855b80cd4999f9,"macro_element_709194e713ea4111b653c2eff979c4c7" : geo_json_709194e713ea4111b653c2eff979c4c7,"macro_element_125bd983545049a38c8e4bf4a11ae049" : geo_json_125bd983545049a38c8e4bf4a11ae049, }
+                };
+            L.control.layers(
+                layer_control_564c50eecffd402f807a9f5ffc81ee6c.base_layers,
+                layer_control_564c50eecffd402f807a9f5ffc81ee6c.overlays
+                ).addTo(map_37c05162c76347bd8a7d20a0d03365b0);
+        
+        
+        
+        </script>
+        

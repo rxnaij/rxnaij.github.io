@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <title>Seminar 4 Final Project</title>
+<head>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <style>
+    img {
+      display:block;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <img src="https://www.bikenyc.org/sites/default/files/citibikelove.jpg">
+
+    <h1>Evaluating the Effectiveness of Bike Lanes in NYC</h1>
+
+    <a href="https://github.com/rxnaij/mhc-project" class="btn btn-lg btn-primary">Click here to find the GitHub repository for this project</a>
+
+    <h2>About this project</h2>
+
+    <p><strong>Course</strong> Macaulay Honors College Seminar 4: Shaping the Future of New York&mdash;cross-campus section
+      <br><strong>Project codename</strong> Team Kevin
+      <br><strong>Members</strong> AJ Chico (Queens), Kenneth Decastillo (Lehman), Richard Lu (Hunter), Daisy Tectactl (Lehman)
+      <br><strong>Instructor</strong> Katherine St. John (Lehman)
+      <br><strong>ITF</strong> Kevin Ambrose</p>
+
+    <h2>Project overview</h2>
+
+    <p>There's no doubt that cycling is growing in New York City&mdash;from the growth of programs such as Citi Bike to the implementation of new traffic safety programs such as Vision Zero, it comes as no surprise that <a href="http://www.nyc.gov/html/dot/downloads/pdf/cycling-in-the-city.pdf">cycling has grown in the city by 80%</a> from 2010 to 2015. More than three quarters of a million New Yorkers ride a bike regularly, and approximately 86,000 adults bike to work or school on a daily basis. It's no surprise that bikes are carving out their place as an essential part of daily life in New York.</p>
+
+    <p>Yet one of the most contentious projects to meet this increase in cycling is the installation of new bike lanes. The goal of this project is to demonstrate that bike lanes are essential to reducing the number of accidents that occur between cyclists and vehicles in New York City.</p>
+
+    <p>Our findings were as expected: accidents were most likely to occur on streets with no bike lanes. The presence of bike lanes on streets was related to lower rates of accidents on those streets.</p>
+
+    <h3>Results of data analysis</h3>
+
+    <p>The data we used was taken from <a href="https://data.cityofnewyork.us/Public-Safety/Columns-removed-accidents/tab3-t4id">here</a>. We looked at all cycling accidents reported by the NYPD in 2015 that occurred in Union Square (zip code 10003). 10003 was selected as a sample size of New York City because of its dense foot, bicycle, and vehicular traffic.</p>
+
+    <p>Using Python packages such as pandas and folium as well as GeoJSON, we analyzed the data and constructed a map that visualized where the accidents occurred, particuarly whether the locations of the accidents were on streets with or without bike lanes. To do this, we had to reconstruct the 2015 bike lane map in GeoJSON layers as well as manually enter whether individual streets (or portions of streets) had certain types of bike lanes (protected, normal, or shared), or lacked any bike lane at all.</p>
+
+    <p>(All Python code used in the project can be found in the project's <a href="https://github.com/rxnaij/mhc-project">GitHub repository</a>. You can also get it directly <a href="https://github.com/rxnaij/mhc-project/blob/master/sem4groupproject.py">here</a>.)</p>
+
+    <img src="https://raw.githubusercontent.com/rxnaij/mhc-project/master/MAP%20IMAGES/MAP_WITH_CLUSTERS.png">
+    <p><a href="mhc-stuff/bikeaccidentLocations.html">Click here to interact with the map</a></p>
+
+    <p>Our findings were that:</p>
+
+    <ul>
+      <li>Most accidents (66.1%) occurred on streets without any bike lanes</li>
+      <li>Most accidents (23.9%) occurred between the times of 7 pm &ndash; 8 pm</li>
+      <li>Most accidents occurred on East 14th Street, 2nd Avenue, 3rd Avenue, 5th Avenue, Broadway, and Park Avenue South/Union Square East (out of these, 2nd Avenue, 5th Avenue, and parts of Broadway and Union Square East had bike lanes along their lengths)</li>
+    </ul>
+
+    <p>There were also some limitations to our data and methodology:</p>
+
+    <ul>
+      <li>Only vehicle-bicycle collisions were reported (bicycle-pedestrian collisions were not included in the dataset)</li>
+      <li>All accidents were reported at the nearest intersection, rather than the exact location</li>
+      <li>Causes for accidents (e.g. driver inattention, road inexperience, etc.) were largely unspecified in the dataset</li>
+    </ul>
+
+    <h2>Data used</h2>
+    <p><a href="https://data.cityofnewyork.us/Public-Safety/Columns-removed-accidents/tab3-t4id">Data used: NYPD Motor Vehicle Collisions</a> (2015 accidents only, 10003 accidents only)
+    <br><a href="https://data.cityofnewyork.us/Public-Safety/NYPD-Motor-Vehicle-Collisions/h9gi-nx95">Original dataset</a></p>
+
+
+  </div>
+
+</body>
+</html>
