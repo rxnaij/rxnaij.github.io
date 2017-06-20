@@ -1,26 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>My portfolio</title>
+  <title>Richard's portfolio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <h1>Portfolio</h1>
-  <p><a href="index.html">Back to home page</a></p>
-  <h2>MEDIA 180 infographic on cultural appropriation</h2>
-  <p>May 2017</p>
-  <img src="culturalappropriation-01.png">
-  <img src="culturalappropriation-03.png">
-  <img src="culturalappropriation-02.png">
-  <h2>New York City Asian American Student Conference website redesign</h2>
-  <p>January 2017 &ndash; April 2017</p>
-  <p><a href="http://nycaasc.com">nycaasc.com</a></p>
-  <p><a href="https://github.com/NYCAASC/nycaasc">GitHub repository</a></p>
-  <h2>Book Club posters</h2>
-  <p>October 2016 &ndash; May 2017</p>
-  <img src="open-mic-poster-01.png">
-  <h2>#LNYBC</h2>
-  <p>November 2016 &ndash; present</p>
-  <a href="http://instagram.com/rxnaij"><img src="IMG_6285.PNG"></a>
+  <header>
+    <header class="site-header">
+      <div class="content-wrap">
+        <p><a href="index.html"><< Back to home page</a></p>
+        <h1>Portfolio</h1>
+      </div>
+    </header>
+
+    <nav class="page-nav">
+      <div class="content-wrap">
+        <h2>Table of contents</h2>
+        <ul>
+          <li><a href="#4">MHC 250 Python projects</a></li>
+          <li><a href="#3">MEDIA 180 cultural appropriation infographic</a></li>
+          <li><a href="#2">NYCAASC website redesign</a></li>
+          <li><a href="#1">Book Club posters</a></li>
+          <li><a href="#0">#LNYBC</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="portfolio">
+
+    <section>
+      <div class="content-wrap">
+        <h2 id="4">MHC 250 Python projects</h2>
+        <p>January 2017&ndash;May 2017</p>
+        <p>Data Analysis, Python</p>
+
+        <img class="head-img" src="hw4-7.png" alt="MHC 250">
+
+        <p><a href="mhc.html">Final project: Evaluating the Effectiveness of Bike Lanes in NYC</a></p>
+        <p><a href="mhc-final-project.html">Classwork: Miscellaneous Data around Flushing, Queens</a></p>
+
+        <p>This special section of the Macaulay Honors Seminar 4 class "Shaping the Future of New York" took a data science-centered approach to analyzing immediate and long-term issues facing New York City, making use of Python to analyze open-source data provided by the city. My final project analyzed the effectiveness of bike lanes, using Union Square as a case study. Using data from the NYC Motor Vehicle Collisions dataset and the Python libraries pandas and folium and GeoJSON, we found that bike lanes were extremely effective in reducing bicycle accident rates.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="content-wrap">
+        <h2 id="3">MEDIA 180 cultural appropriation infographic</h2>
+        <p>May 2017</p>
+        <p>Web, Infographic</p>
+
+        <img class="head-img" src="culturalappropriation-01.png" alt="Cultural Appropriation Infographic page 1">
+        <p>Cultural appropriation is a very divisive topic; however, I believe that much of its controversy arises out of fundamental misunderstandings about what exactly entails cultural appropriation. For the final project of my MEDIA 180 class, I chose to create
+        an infographic that provides a clear and concise explanation of the issue. The infographic takes advantage of visual hierarchy to help readers understand the general thrust of the content even before they read the text.</p>
+        <div class="more-images">
+          <img class="sub-img" src="culturalappropriation-03.png" alt="Cultural Appropriation Infographic page 2">
+          <img class="sub-img" src="culturalappropriation-02.png" alt="Cultural Appropriation Infographic page 3">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="content-wrap">
+        <h2 id="2">NYCAASC website redesign</h2>
+        <p>January 2017 &ndash; April 2017</p>
+        <p>Web, User Interface</p>
+
+        <img class="head-img" src="nycaasc-1.png" alt="NYCAASC website redesign">
+        <p><a href="http://nycaasc.com">Visit NYCAASC website</a></p>
+        <p><a href="https://github.com/NYCAASC/nycaasc">GitHub repository</a></p>
+        <p>The New York City Asian American Student Conference (NYCAASC) is a student-run conference focused on creating an accessible space for fellow students to learn and feel empowered around Asian American social, political, and cultural issues. However,
+          the NYCAASC website had many flaws that made it difficult for interested users to locate information; for instance, the organization's mission. The goal of redesigning the website was to translate the core value of accessibility into the website's
+          user experience. This involved creating a style guide and user pathways that completely reimagined the aesthetic and information flows, respectively, from the perspective of the end user. The end result is a site that is clean, clear, and empowering.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="content-wrap">
+        <h2 id="1">Book Club posters</h2>
+        <p>October 2016 &ndash; May 2017</p>
+        <p>Web, Poster</p>
+
+        <img class="head-img" src="open-mic-poster-01.png" alt="Book Club Spring Open Mic poster">
+      </div>
+    </section>
+
+    <section>
+      <div class="content-wrap">
+        <h2 id="0">#LNYBC</h2>
+        <p>November 2016 &ndash; present</p>
+        <p>Digital, Photography</p>
+
+        <img class="head-img" src="IMG_6285.PNG" alt="LNYBC logo">
+        <p><a href="https://instagram.com/rxnaij">Visit Instagram page</a></p>
+        <p>"City life" isn't the same for everyone&mdash;some hearts just aren't cut out for it. This photography project began as a way to map out my own emotions in New York. It's the city where my body resides, where my mind operates, and where my heart doesn't
+          belong. What does it stand for? ...That's up to you to imagine.</p>
+
+        <div class="more-images">
+          <img class="sub-img" src="assets/img/lnybc-2.jpg" alt="LNYBC sample photo">
+          <img class="sub-img" src="assets/img/lnybc-3.jpg" alt="LNYBC sample photo">
+          <img class="sub-img" src="assets/img/lnybc-4.jpg" alt="LNYBC sample photo">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
 </body>
+
 </html>

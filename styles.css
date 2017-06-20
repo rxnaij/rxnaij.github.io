@@ -1,13 +1,64 @@
+/* Global styles
+------------------------- */
 body {
   line-height: 1.4em;
   font-family: serif;
+  margin: 0;
 }
-
 h1, h2, h3 {
   line-height: 1.2em;
   font-family: sans-serif;
 }
+.content-wrap {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 50px;
+  overflow: auto;
+}
+h1 {
+  font-size: 2.25em;
+}
+h2 {
+  margin-top: 0;
+  font-size: 2em;
+}
+a {
+  font-weight: bold;
+}
+/* Index styles
+------------------------- */
+.about-img {
+  float:right;
+  width: 400px;
+  border-radius: 50%;
+}
 
-img {
-  display:block;
+/* Portfolio styles
+------------------------- */
+/* Header */
+.site-header {
+  background: #7EB09B;
+}
+.page-nav {
+  background: #C5C9A4;
+}
+/* Main content */
+.page-nav, .portfolio {
+  color: #184147;
+}
+.portfolio {
+  background: #FFE1B2;
+}
+.head-img {
+  width: 400px;
+  display: block;
+  margin: 0 auto;
+}
+.sub-img {
+  width: 300px;
+  display: inline-block;
+  padding: 10px;
+}
+.more-images {
+  text-align:center;
 }
