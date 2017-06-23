@@ -14,14 +14,17 @@ h1, h2, h3 {
   line-height: 1.2em;
   font-family: sans-serif;
 }
+h2 {
+  margin-top: 0;
+}
 .content-wrap {
   max-width: 950px;
   margin: 0 auto;
-  padding: 40px;
+  padding: 20px;
   overflow: auto;
 }
 a {
-  font-weight: bold;
+
 }
 
 /* Header and footer styles
@@ -29,14 +32,28 @@ a {
 /* Header */
 
 /* Footer */
+footer {
+  background: lightblue;
+}
+footer p:first-child {
+  color: gray;
+}
 footer ul {
   list-style-type: none;
+}
+footer a {
+  text-decoration: none;
 }
 
 /* Navigation styles
 ------------------------- */
-.portfolio-btn {
+nav {
+  margin-top: 30px;
+  text-align: center;
+}
+.btn-blocky {
   position: relative;
+  display: inline-block;
   width: 150px;
   height: 150px;
   margin: 0 auto;
@@ -44,12 +61,7 @@ footer ul {
   border-radius: 10%;
   text-align: center;
 }
-.portfolio-btn a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.portfolio-btn span {
+.btn-blocky span {
   position: absolute;
   top: 20px;
   left: 20px;
@@ -57,10 +69,26 @@ footer ul {
   font-weight: bold;
   font-size: 24px;
 }
-.portfolio-btn i {
+.btn-blocky i {
   position: absolute;
   top: 60px;
   left: 40px;
+}
+.btn-link:link {
+    color: black;
+}
+
+/* visited link */
+.btn-link:visited {
+    color: black;
+}
+/* mouse over link */
+.btn-link:hover {
+  color: lightblue;
+}
+/* selected link */
+.btn-link:active {
+    color: lightblue;
 }
 
 /* Index styles
