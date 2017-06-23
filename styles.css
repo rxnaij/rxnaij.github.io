@@ -1,8 +1,16 @@
 /* Global styles
 ------------------------- */
+/* Box model fix */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   line-height: 1.4em;
-  font-family: serif;
+  font-family: Helvetica;
   margin: 0;
 }
 h1, h2, h3 {
@@ -37,17 +45,19 @@ a {
 ------------------------- */
 /* Header */
 .site-header {
-  background: #7EB09B;
+  background: #16161D;
+  color: white;
 }
 .page-nav {
-  background: #C5C9A4;
+  background: #343434;
+  color: #FFFAFA;
 }
 /* Main content */
-.page-nav, .portfolio {
-  color: #184147;
+.portfolio-item:nth-of-type(odd) {
+  background: #F5FFFA;
 }
-.portfolio {
-  background: #FFE1B2;
+.portfolio-item:nth-of-type(even) {
+  background: #F8F8FF;
 }
 .head-img {
   width: 400px;
