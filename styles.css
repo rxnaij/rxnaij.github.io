@@ -7,11 +7,8 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
 body {
-  line-height: 1.4em;
   font-family: Helvetica;
-  margin: 0;
 }
 h1, h2, h3 {
   line-height: 1.2em;
@@ -20,24 +17,58 @@ h1, h2, h3 {
 .content-wrap {
   max-width: 950px;
   margin: 0 auto;
-  padding: 50px;
+  padding: 40px;
   overflow: auto;
-}
-h1 {
-  font-size: 2.25em;
-}
-h2 {
-  margin-top: 0;
-  font-size: 2em;
 }
 a {
   font-weight: bold;
 }
+
+/* Header and footer styles
+------------------------- */
+/* Header */
+
+/* Footer */
+footer ul {
+  list-style-type: none;
+}
+
+/* Navigation styles
+------------------------- */
+.portfolio-btn {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  border: black 5px solid;
+  border-radius: 10%;
+  text-align: center;
+}
+.portfolio-btn a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.portfolio-btn span {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 24px;
+}
+.portfolio-btn i {
+  position: absolute;
+  top: 60px;
+  left: 40px;
+}
+
 /* Index styles
 ------------------------- */
 .about-img {
-  float:right;
-  width: 400px;
+  margin: 0 auto;
+  max-width: 300px;
+  border: black solid 5px;
   border-radius: 50%;
 }
 
@@ -71,4 +102,8 @@ a {
 }
 .more-images {
   text-align:center;
+}
+
+@media (max-height: 900px) {
+
 }
