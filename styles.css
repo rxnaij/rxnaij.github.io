@@ -150,6 +150,7 @@ nav {
   color: #FFFAFA;
 }
 /* Portfolio menu main content */
+/* Old portfolio page CSS
 .portfolio-item:nth-of-type(odd) {
   background: #F5FFFA;
 }
@@ -168,13 +169,13 @@ nav {
 }
 .more-images {
   text-align:center;
-}
+}*/
 .portfolio-featured-item {
   width: 100%;
   margin: 0 auto;
   padding: 35px;
   overflow: auto;
-  background: lightblue;
+  background: linear-gradient(rgba(166,205,222,0.5), rgba(166,205,222,0.5));
   border-bottom: 3px solid white;
   border-top: 3px solid white;
 }
@@ -186,6 +187,19 @@ nav {
 .portfolio-other-item p {
   margin: 0;
 }
+/* Background images for featured items
+#featured-item-3 {
+  background: linear-gradient(rgba(166,205,222,0.7), rgba(166,205,222,0.7)), url(images/mhc-1.jpg);
+  background-size: cover;
+}
+#featured-item-2 {
+  background: linear-gradient(rgba(166,205,222,0.7), rgba(166,205,222,0.7)), url(images/cult-app-thumbnail.jpg);
+  background-size: cover;
+}
+#featured-item-1 {
+  background: linear-gradient(rgba(166,205,222,0.7), rgba(166,205,222,0.7)), url(images/nycaasc-1.png);
+  background-size: cover;
+}*/
 .portfolio-other-item {
   width: 90%;
   margin: 0 auto;
