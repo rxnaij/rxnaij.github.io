@@ -17,23 +17,45 @@ h1, h2, h3 {
 h2 {
   margin-top: 0;
 }
+main {
+  line-height: 1.4em;
+}
 .content-wrap {
   max-width: 950px;
   margin: 0 auto;
   padding: 20px;
   overflow: auto;
 }
-a {
-
+.col-narrow {
+  display: inline-block;
+  width: 15%;
+}
+.col-wide {
+  display: inline-block;
+  width: 80%;
+}
+.col-3 {
+  display:inline-block;
+  width: 32%;
 }
 
 /* Header and footer styles
 ------------------------- */
 /* Header */
+header a {
+  text-decoration: none;
+}
+header a:visited {
+  color: inherit;
+}
 
 /* Footer */
 footer {
   background: lightblue;
+}
+footer>p {
+  padding-left: 15px;
+  padding-top: 15px;
 }
 footer p:first-child {
   color: gray;
@@ -43,6 +65,10 @@ footer ul {
 }
 footer a {
   text-decoration: none;
+}
+.footer-social {
+  text-align: center;
+  font-size: 13px;
 }
 
 /* Navigation styles
@@ -103,15 +129,27 @@ nav {
 /* Portfolio styles
 ------------------------- */
 /* Header */
-.site-header {
+.portfolio-header {
   background: #16161D;
   color: white;
+}
+.portfolio-header h2 {
+  padding-top: 15px;
+  text-align: center;
+}
+.portfolio-header h2 ~ p {
+  margin: 0;
+  text-align: center;
+}
+.portfolio-home-title {
+  font-size: 1em;
+  margin-bottom: 2em;
 }
 .page-nav {
   background: #343434;
   color: #FFFAFA;
 }
-/* Main content */
+/* Portfolio menu main content */
 .portfolio-item:nth-of-type(odd) {
   background: #F5FFFA;
 }
@@ -136,19 +174,32 @@ nav {
   margin: 0 auto;
   padding: 35px;
   overflow: auto;
-  background: lightgreen;
+  background: lightblue;
   border-bottom: 3px solid white;
   border-top: 3px solid white;
 }
-.col-narrow {
-  display: inline-block;
-  width: 15%;
+.portfolio-featured-item h3,
+.portfolio-other-item h3 {
+  margin-top: 0;
 }
-.col-wide {
-  display: inline-block;
-  width: 80%;
+.portfolio-featured-item p,
+.portfolio-other-item p {
+  margin: 0;
+}
+.portfolio-other-item {
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px;
+  overflow: auto;
+}
+.portfolio-bdr {
+  border-bottom: 3px solid black;
 }
 
-@media (max-height: 900px) {
-
+/* Portfolio items */
+.tagline img,
+.project img,
+.about img,
+.whats-next img {
+  width: 100%;
 }
