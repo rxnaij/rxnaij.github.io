@@ -7,6 +7,14 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+/* Reset content widths */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
 body {
   font-family: Helvetica;
 }
@@ -21,7 +29,7 @@ main {
   line-height: 1.4em;
 }
 .content-wrap {
-  max-width: 950px;
+  max-width: 925px;
   margin: 0 auto;
   padding: 20px;
   overflow: auto;
@@ -38,7 +46,9 @@ main {
   display:inline-block;
   width: 32%;
 }
+.button {
 
+}
 /* Header and footer styles
 ------------------------- */
 /* Header */
@@ -106,7 +116,7 @@ nav {
 
 /* visited link */
 .btn-link:visited {
-    color: black;
+  color: initial;
 }
 /* mouse over link */
 .btn-link:hover {
@@ -141,6 +151,10 @@ nav {
 .portfolio-header h2 ~ p {
   margin: 0;
   text-align: center;
+}
+.portfolio-header h2 ~ p:last-of-type {
+  margin-top: 20px;
+  font-style: italic;
 }
 .portfolio-home-title {
   font-size: 1em;
@@ -216,5 +230,7 @@ nav {
 .project img,
 .about img,
 .whats-next img {
-  width: 100%;
+  display: block;
+  margin: auto;
+  max-width: 500px;
 }
