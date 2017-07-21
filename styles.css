@@ -169,11 +169,10 @@ nav {
   padding-top: 15px;
   text-align: center;
 }
-.portfolio-header h2 ~ p {
+.portfolio-header h1 ~ p {
   margin: 0;
-  text-align: center;
 }
-.portfolio-header h2 ~ p:last-of-type {
+.portfolio-header h1 ~ p:last-of-type {
   margin-top: 20px;
   font-style: italic;
 }
