@@ -110,21 +110,20 @@ nav {
   top: 60px;
   left: 40px;
 }
-.btn-link:link {
-    color: black;
-}
+.card-link:link {
 
+}
 /* visited link */
-.btn-link:visited {
-  color: initial;
+.card-link:visited {
+
 }
 /* mouse over link */
-.btn-link:hover {
-  color: lightblue;
+.card-link:hover {
+
 }
 /* selected link */
-.btn-link:active {
-    color: lightblue;
+.card-link:active {
+
 }
 
 /* Index styles
@@ -164,59 +163,27 @@ nav {
   background: #343434;
   color: #FFFAFA;
 }
-/* Portfolio menu main content */
-/* Old portfolio page CSS
-.portfolio-item:nth-of-type(odd) {
-  background: #F5FFFA;
-}
-.portfolio-item:nth-of-type(even) {
-  background: #F8F8FF;
-}
-.head-img {
-  width: 400px;
-  display: block;
+.portfolio-card {
+  max-width: 750px;
   margin: 0 auto;
-}
-.sub-img {
-  width: 300px;
-  display: inline-block;
-  padding: 10px;
-}
-.more-images {
-  text-align:center;
-}*/
-.portfolio-featured-item {
-  width: 100%;
-  margin: 0 auto;
-  padding: 35px;
   overflow: auto;
-  background: linear-gradient(rgba(166,205,222,0.5), rgba(166,205,222,0.5));
   border-bottom: 3px solid white;
   border-top: 3px solid white;
 }
-.portfolio-featured-item h3,
+.portfolio-card-content {
+  padding: 35px;
+  background: rgba(166,205,222,0.5);
+}
+.portfolio-card-content h3,
 .portfolio-other-item h3 {
   margin-top: 0;
 }
-.portfolio-featured-item p,
+.portfolio-card-content p,
 .portfolio-other-item p {
   margin: 0;
 }
-/* Background images for featured items
-#featured-item-3 {
-  background: linear-gradient(rgba(166,205,222,0.7), rgba(166,205,222,0.7)), url(images/mhc-1.jpg);
-  background-size: cover;
-}
-#featured-item-2 {
-  background: linear-gradient(rgba(166,205,222,0.7), rgba(166,205,222,0.7)), url(images/cult-app-thumbnail.jpg);
-  background-size: cover;
-}
-#featured-item-1 {
-  background: linear-gradient(rgba(166,205,222,0.7), rgba(166,205,222,0.7)), url(images/nycaasc-1.png);
-  background-size: cover;
-}*/
 .portfolio-other-item {
-  width: 90%;
+  max-width: 750px;
   margin: 0 auto;
   padding: 40px;
   overflow: auto;
@@ -224,7 +191,6 @@ nav {
 .portfolio-bdr {
   border-bottom: 3px solid black;
 }
-
 /* Portfolio items */
 .tagline img,
 .project img,
