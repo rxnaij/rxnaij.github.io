@@ -49,6 +49,7 @@ main {
 .button {
 
 }
+
 /* Header and footer styles
 ------------------------- */
 /* Header */
@@ -84,7 +85,6 @@ footer a {
 /* Navigation styles
 ------------------------- */
 nav {
-  margin-top: 30px;
   text-align: center;
 }
 .btn-blocky {
@@ -126,6 +126,24 @@ nav {
 
 }
 
+/* Site navigation styles
+------------------------- */
+.site-nav {
+  border-bottom: 1px solid lightblue;
+  margin-bottom: 25px;
+}
+
+.site-nav ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+.site-nav ul li {
+  display:block;
+}
+
 /* Index styles
 ------------------------- */
 .about-img {
@@ -134,6 +152,10 @@ nav {
   max-width: 300px;
   border: black solid 5px;
   border-radius: 50%;
+}
+
+.menu-icon {
+  width: 100px;
 }
 
 /* Portfolio styles
