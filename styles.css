@@ -60,7 +60,7 @@ header a:visited {
   color: inherit;
 }
 
-/* Footer */
+/* Site footer */
 footer {
   background: lightblue;
 }
@@ -110,6 +110,7 @@ nav {
   top: 60px;
   left: 40px;
 }
+/* Cards are large, selectable "cards" that link to other pages--see the portfolio */
 .card-link:link {
 
 }
