@@ -1,13 +1,20 @@
 /* Global styles
 ------------------------- */
+
+
 /* Box model fix */
+
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+
 /* Reset content widths */
+
 html, body {
   width: 100%;
   height: 100%;
@@ -15,78 +22,104 @@ html, body {
   padding: 0px;
   overflow-x: hidden;
 }
+
 body {
   font-family: Helvetica;
 }
+
+main {
+  line-height: 1.4em;
+}
+
 h1, h2, h3 {
   line-height: 1.2em;
   font-family: sans-serif;
 }
+
 h2 {
   margin-top: 0;
 }
-main {
-  line-height: 1.4em;
-}
+
 .content-wrap {
   max-width: 925px;
   margin: 0 auto;
   padding: 20px;
   overflow: auto;
 }
+
 .col-narrow {
   display: inline-block;
   width: 15%;
 }
+
 .col-wide {
   display: inline-block;
   width: 80%;
 }
+
 .col-3 {
-  display:inline-block;
+  display: inline-block;
   width: 32%;
 }
-.button {
 
-}
+.button {}
+
 
 /* Header and footer styles
 ------------------------- */
+
+
 /* Header */
+
 header a {
   text-decoration: none;
 }
+
 header a:visited {
   color: inherit;
 }
 
+
 /* Site footer */
+
 footer {
   background: lightblue;
 }
+
 footer>p {
   padding-left: 15px;
   padding-top: 15px;
 }
+
 footer p:first-child {
   color: gray;
 }
+
 footer ul {
   list-style-type: none;
 }
+
 footer a {
   text-decoration: none;
 }
+
 .footer-social {
   text-align: center;
   font-size: 13px;
 }
 
+.footer-social a:visited {
+  color: inherit;
+}
+
+
 /* Navigation styles
 ------------------------- */
+
 nav {
   text-align: center;
 }
+
 .btn-blocky {
   position: relative;
   display: inline-block;
@@ -97,6 +130,7 @@ nav {
   border-radius: 10%;
   text-align: center;
 }
+
 .btn-blocky span {
   position: absolute;
   top: 20px;
@@ -105,30 +139,37 @@ nav {
   font-weight: bold;
   font-size: 24px;
 }
+
 .btn-blocky i {
   position: absolute;
   top: 60px;
   left: 40px;
 }
+
+
 /* Cards are large, selectable "cards" that link to other pages--see the portfolio */
-.card-link:link {
 
-}
+.card-link:link {}
+
+
 /* visited link */
-.card-link:visited {
 
-}
+.card-link:visited {}
+
+
 /* mouse over link */
-.card-link:hover {
 
-}
+.card-link:hover {}
+
+
 /* selected link */
-.card-link:active {
 
-}
+.card-link:active {}
+
 
 /* Site navigation styles
 ------------------------- */
+
 .site-nav {
   border-bottom: 1px solid lightblue;
   margin-bottom: 25px;
@@ -142,11 +183,13 @@ nav {
 }
 
 .site-nav ul li {
-  display:block;
+  display: block;
 }
+
 
 /* Index styles
 ------------------------- */
+
 .about-img {
   display: block;
   margin: 0 auto;
@@ -159,65 +202,113 @@ nav {
   width: 100px;
 }
 
+
 /* Portfolio styles
 ------------------------- */
+
+
 /* Header */
+
 .portfolio-header {
   background: #16161D;
   color: white;
 }
+
 .portfolio-header h2 {
   padding-top: 15px;
   text-align: center;
 }
-.portfolio-header h1 ~ p {
+
+.portfolio-header h1~p {
   margin: 0;
 }
-.portfolio-header h1 ~ p:last-of-type {
+
+.portfolio-header h1~p:last-of-type {
   margin-top: 20px;
   font-style: italic;
 }
+
 .portfolio-home-title {
   font-size: 1em;
   margin-bottom: 2em;
 }
+
 .page-nav {
   background: #343434;
   color: #FFFAFA;
 }
+
+
+/* Directory */
+
+.card {
+  margin: 8px;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
 .portfolio-card {
   max-width: 750px;
-  margin: 0 auto;
   overflow: auto;
-  border-bottom: 3px solid white;
-  border-top: 3px solid white;
 }
+
+.portfolio-card a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .portfolio-card-content {
-  padding: 35px;
-  background: rgba(166,205,222,0.5);
+  background: rgba(166, 205, 222, 0.5);
 }
-.portfolio-card-content h3,
-.portfolio-other-item h3 {
-  margin-top: 0;
+
+.portfolio-card-media {
+  width: 100%;
+  padding-bottom: 56.25%;
+  position: relative;
+  overflow: hidden;
 }
-.portfolio-card-content p,
-.portfolio-other-item p {
+
+.portfolio-card-media > div {
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+}
+
+@media (max-width: 425px) {
+  .portfolio-card-media > div > img {
+    width: 425px;
+  }
+}
+
+/* NOTE: The following three styles describe the date and tags as they appear in the Portfolio page's cards and are not universal to each item's respective detail page. */
+.portfolio-card-content h3 {
   margin: 0;
+  padding: 16px;
+  padding-top: 24px;
+  font-size: 24px;
+  font-weight: lighter;
 }
-.portfolio-other-item {
-  max-width: 750px;
-  margin: 0 auto;
-  padding: 40px;
-  overflow: auto;
+
+.portfolio-card-content p {
+  margin: 0;
+  padding: 16px;
+  padding-top: 0;
+  font-size: 14px;
 }
+
+.portfolio-card-content p:first-of-type {
+  padding-bottom: 0;
+}
+/* END: Portfolio page-specific styles */
+
 .portfolio-bdr {
   border-bottom: 3px solid black;
 }
+
+
 /* Portfolio items */
-.tagline img,
-.project img,
-.about img,
-.whats-next img {
+
+.tagline img, .project img, .about img, .whats-next img {
   display: block;
   margin: auto;
   max-width: 500px;
