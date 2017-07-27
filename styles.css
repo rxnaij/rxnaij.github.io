@@ -16,11 +16,11 @@ html {
 /* Reset content widths */
 
 html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0px;
+  /*width: 100%;
+  height: 100%;*/
+  /*margin: 0px;
   padding: 0px;
-  overflow-x: hidden;
+  overflow-x: hidden;*/
 }
 
 body {
@@ -242,6 +242,7 @@ nav {
 /* Directory */
 
 .card {
+  max-width: 425px;
   margin: 8px;
   border-radius: 2px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
