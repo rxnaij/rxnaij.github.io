@@ -82,6 +82,7 @@ header a:visited {
 
 #site-footer {
   background: #9fffd7;
+  color: hsla(200,0%,0%,0.7);
 }
 
 #site-footer>p {
@@ -169,7 +170,7 @@ nav {
 ------------------------- */
 
 .site-nav {
-  border-bottom: 1px solid lightblue;
+  border-bottom: 1px solid #9fffd7;
   margin-bottom: 25px;
 }
 
@@ -242,6 +243,8 @@ nav {
 .card {
   max-width: 425px;
   margin: 8px;
+  margin-top: 16px;
+  margin-bottom: 16px;
   border-radius: 2px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
@@ -286,6 +289,7 @@ nav {
   padding-top: 24px;
   font-size: 24px;
   font-weight: normal;
+  color: hsla(200,0%,0%,0.5);
 }
 
 .portfolio-card-content p {
@@ -293,6 +297,7 @@ nav {
   padding: 16px;
   padding-top: 0;
   font-size: 14px;
+  color: hsla(200,0%,0%,0.7);
 }
 
 .portfolio-card-content p:first-of-type {
