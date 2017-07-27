@@ -16,15 +16,15 @@ html {
 /* Reset content widths */
 
 html, body {
-  /*width: 100%;
-  height: 100%;*/
-  /*margin: 0px;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
   padding: 0px;
-  overflow-x: hidden;*/
+  overflow-x: hidden;
 }
 
 body {
-  font-family: Helvetica;
+  font-family: Helvetica, sans-serif;
 }
 
 main {
@@ -62,8 +62,6 @@ h2 {
   width: 32%;
 }
 
-.button {}
-
 
 /* Header and footer styles
 ------------------------- */
@@ -82,24 +80,24 @@ header a:visited {
 
 /* Site footer */
 
-footer {
-  background: lightblue;
+#site-footer {
+  background: #9fffd7;
 }
 
-footer>p {
+#site-footer>p {
   padding-left: 15px;
   padding-top: 15px;
 }
 
-footer p:first-child {
+#site-footer p:first-child {
   color: gray;
 }
 
-footer ul {
+#site-footer ul {
   list-style-type: none;
 }
 
-footer a {
+#site-footer a {
   text-decoration: none;
 }
 
@@ -260,7 +258,7 @@ nav {
 }
 
 .portfolio-card-content {
-  background: rgba(166, 205, 222, 0.5);
+  background: #d9ffef;
 }
 
 .portfolio-card-media {
@@ -275,11 +273,11 @@ nav {
   top: 0; bottom: 0; left: 0; right: 0;
 }
 
-@media (max-width: 425px) {
-  .portfolio-card-media > div > img {
-    width: 425px;
-  }
+
+.portfolio-card-media > div > img {
+  width: 100%;
 }
+
 
 /* NOTE: The following three styles describe the date and tags as they appear in the Portfolio page's cards and are not universal to each item's respective detail page. */
 .portfolio-card-content h3 {
@@ -287,7 +285,7 @@ nav {
   padding: 16px;
   padding-top: 24px;
   font-size: 24px;
-  font-weight: lighter;
+  font-weight: normal;
 }
 
 .portfolio-card-content p {
@@ -302,15 +300,15 @@ nav {
 }
 /* END: Portfolio page-specific styles */
 
-.portfolio-bdr {
-  border-bottom: 3px solid black;
-}
-
 
 /* Portfolio items */
 
-.tagline img, .project img, .about img, .whats-next img {
-  display: block;
-  margin: auto;
-  max-width: 500px;
+@media (max-width: 425px) {
+  .tagline img, .project img, .about img, .whats-next img {
+    display: block;
+    margin: auto;
+    width: 100%;
+    max-width: 425px;
+    height: auto;
+  }
 }
