@@ -133,7 +133,7 @@ main p {
 .button span { /* Visible button */
   display: inline-block;
   min-width: 64px;
-  height: 36px;
+  min-height: 36px;
   padding-left: 8px;
   padding-right: 8px;
   border-radius: 2px;
@@ -163,6 +163,18 @@ main p {
   .raised:hover {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   }
+}
+
+.flat { /* Flat buttons */
+  background-color: rgba(255,255,255,0);
+  color: #000;
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.flat:hover {
+  background-color: rgba(255,255,255,0.4);
+  color: #121212;
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
 
 /* -------------------------
@@ -276,39 +288,30 @@ header a:visited {
 ------------------------- */
 
 #site-footer {
+  padding: 10px;
   background: #9fffd7;
   color: hsla(200,0%,0%,0.7);
   z-index: 0;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
 }
 
-#site-footer>p {
-  padding-left: 15px;
-  padding-top: 15px;
+.contact ul {
+  list-style: none;
 }
 
-#site-footer p:first-child {
+#site-footer>p:first-of-type {
   color: gray;
 }
 
-#site-footer ul {
-  list-style-type: none;
-}
-
-#site-footer a div {
-  text-decoration: none;
-  /*transition: all 0.3s cubic-bezier(.25, .8, .25, 1);*/
-}
-#site-footer a div:hover {
-  /*background-color: hsl(155, 100%, 72.3%);*/
-}
-
-.footer-social {
-  text-align: center;
-  font-size: 13px;
-}
-
-.footer-social a:visited {
-  color: inherit;
+@media (min-width: 769px) {
+  .contact {
+    display: inline-block;
+    width: 45%;
+    height: 116px;
+    border: green solid 1px;
+  }
 }
 
 
@@ -359,6 +362,10 @@ header a:visited {
 /* Directory
 ------------------------- */
 
+.portfolio-page {
+  text-align: center;
+}
+
 .card {
   max-width: 425px;
   margin: 8px;
@@ -368,11 +375,12 @@ header a:visited {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
+
 @media (min-width: 769px) {
   .card {
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.24);
     display: inline-block;
-    margin: 1em;
+    margin: 16px;
     width: 45%;
     height: auto;
   }
