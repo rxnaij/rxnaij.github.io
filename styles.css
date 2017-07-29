@@ -61,6 +61,10 @@ h2 {
   overflow: auto;
 }
 
+.content-wrap img~h2 {
+  margin-top: 50px;
+}
+
 .col-narrow {
   display: inline-block;
   width: 15%;
@@ -460,4 +464,23 @@ header a:visited {
     max-width: 425px;
     height: auto;
   }
+}
+
+.tagline img, .project img, .about img, .whats-next img {
+  display: block;
+  margin: 0 auto;
+  max-width: 720px;
+  height: auto;
+}
+
+.lnybc-page {
+
+}
+
+.light-off {
+  background-color: #16161D;
+  color: rgb(217, 255, 239);
+}
+.light-off p  {
+  color: #ddd;
 }

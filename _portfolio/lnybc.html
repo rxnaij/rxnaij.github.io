@@ -28,49 +28,41 @@
     </div>
   </header>
 
-  <main>
+  <main class="lnybc-page">
 
-    <section class="tagline">
-      <img src="../_images/logo.png">
-      <div class="content-wrap">
-        <p><a href="https://instagram.com/rxnaij" alt="LNYBC Instagram"><em><strong>Thoughts, moods, joy, devastation, refreshment, depression, heart.</strong></em></a></p>
-      </div>
+    <section class="tagline content-wrap">
+      <img id="lightswitch" src="../_images/logo.png">
+      <p style="text-align:center;"><a href="https://instagram.com/rxnaij" alt="LNYBC Instagram"><em><strong>Thoughts, moods, joy, devastation, refreshment, depression, heart.</strong></em></a></p>
     </section>
 
-    <section class="about">
-      <div class="content-wrap">
-        <h2>About the project</h2>
-        <p>i sometimes&mdash;always&mdash;think about the feeling of wind on my skin
-        <br>at home, but it's never quite there</p>
-        <p>here's to the dreamers, feelers, optimists, introverts, and lovers navigating the world quietly,</p>
-        <p>their heart an optimistic compass</p>
-      </div>
+    <section class="about content-wrap">
+      <h2>About the project</h2>
+      <p>i sometimes&mdash;always&mdash;think about the feeling of wind on my skin
+      <br>at home, but it's never quite there</p>
+      <p>here's to the dreamers, feelers, optimists, introverts, and lovers navigating the world quietly,</p>
+      <p>their heart an optimistic compass</p>
     </section>
 
-    <section class="project">
+    <section class="project content-wrap">
       <img src="../_images/_portfolio/lnybc-sample-1.jpg" alt="LNYBC photo">
       <img src="../_images/_portfolio/lnybc-sample-2.jpg" alt="LNYBC photo">
-      <div class="content-wrap">
-        <h2>Process</h2>
-        <h3>Inspiration</h3>
-        <p>I used to be a cold little shit. Several art forms&mdash;all of them Japanese in character&mdash;ignited a little flame in my heart that warmed myself up.</p>
-        <p>And like a warm feeling seeping in, I learned that art will always be there for me.</p>
-        <h3>Reflection</h3>
-        <p>This project has also been a journey of learning photography, from composition to lighting to editing.</p>
-        <p>I admit that going outside and taking photos has always triggered my social anxiety. I become very self-conscious about being viewed with suspicion for having a camera in my hands. It would be appropriate, I suppose, to say that this project has truly made me feel vulnerable.</p>
-        <h3>Tools used</h3>
-        <p>I shoot with a Nikon D5000 (digital) and a Nikon FM2 (film). I use Adobe Photoshop and Lightroom to edit my photos.</p>
-      </div>
+      <h2>Process</h2>
+      <h3>Inspiration</h3>
+      <p>I used to be a cold little shit. Several art forms&mdash;all of them Japanese in character&mdash;ignited a little flame in my heart that warmed myself up.</p>
+      <p>And like a warm feeling seeping in, I learned that art will always be there for me.</p>
+      <h3>Reflection</h3>
+      <p>This project has also been a journey of learning photography, from composition to lighting to editing.</p>
+      <p>I admit that going outside and taking photos has always triggered my social anxiety. I become very self-conscious about being viewed with suspicion for having a camera in my hands. It would be appropriate, I suppose, to say that this project has truly made me feel vulnerable.</p>
+      <h3>Tools used</h3>
+      <p>I shoot with a Nikon D5000 (digital) and a Nikon FM2 (film). I use Adobe Photoshop and Lightroom to edit my photos.</p>
     </section>
 
-    <section class="whats-next">
+    <section class="whats-next content-wrap">
       <img src="../_images/_portfolio/lnybc-sample-3.jpg" alt="LNYBC photo">
       <img src="../_images/_portfolio/lnybc-sample-4.jpg" alt="LNYBC photo">
-      <div class="content-wrap">
-        <h2>What's next?</h2>
-        <p>This project will never end.</p>
-        <p>If the message of these photos compels you, I invite you to tag #LNYBC when you think it's appropriate.</p>
-      </div>
+      <h2>What's next?</h2>
+      <p>This project will never end.</p>
+      <p>If the message of these photos compels you, I invite you to tag #LNYBC when you think it's appropriate.</p>
     </section>
 
   </main>
@@ -102,4 +94,21 @@
     </div>
   </footer>
 </body>
+<script>
+  const lightSwitch = document.querySelector("#lightswitch");
+  const page = document.querySelector(".lnybc-page");
+  var lightState = page.classList.contains("light-off");
+
+  function toggleLight(light){
+    if (!light) {
+      page.classList.add("light-off");
+      light = true;
+    } else {
+      page.classList.remove("light-off");
+      light = false;
+    }
+  }
+
+  lightSwitch.addEventListener("click", toggleLight(lightState), false);
+</script>
 </html>
