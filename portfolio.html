@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <header class="portfolio-header">
+  <header class="site-header">
 
     <div class="content-wrap">
 
@@ -28,73 +28,70 @@
     </div>
   </header>
 
-  <main>
+  <main class="portfolio-page content-wrap" role="main">
 
-    <section>
+    <div class="card portfolio-card">
+      <a class="card-link" href="_portfolio/mhc.html" title="">
+        <div class="portfolio-card-content">
+          <div class="portfolio-card-media">
+            <div> <img src="_images/_portfolio/mhc-1.jpg"> </div>
+          </div>
+            <h3 class="portfolio-item-title">Bicycle Accidents in Union Square</h3>
+            <p class="portfolio-item-date">January 2017 &ndash; May 2017</p>
+            <p class="portfolio-item-tags">Data Analysis, Python</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="card portfolio-card">
+      <a class="card-link" href="_portfolio/media-infographic.html">
+        <div class="portfolio-card-content">
+          <div class="portfolio-card-media">
+            <div> <img src="_images/_portfolio/culturalappropriation-tb.jpg"> </div>
+          </div>
+          <h3 class="portfolio-item-title">Infographic: <em>What exactly is cultural appropriation?</em></h3>
+          <p class="portfolio-item-date">May 2017</p>
+          <p class="portfolio-item-tags">Web, Infographic</p>
+        </div>
+      </a>
+    </div>
+    <div class="card portfolio-card">
+      <a class="card-link" href="#">
+        <div class="portfolio-card-content">
+          <div class="portfolio-card-media">
+            <div> <img src="_images/_portfolio/nycaasc-sample-1.png"> </div>
+          </div>
+          <h3 class="portfolio-item-title">NYCAASC website redesign</h3>
+          <p class="portfolio-item-date">January 2017 &ndash; April 2017</p>
+          <p class="portfolio-item-tags">Web, User Interface</p>
+        </div>
+      </a>
+    </div>
+    <div class="card portfolio-card">
+      <a class="card-link" href="#">
+        <div class="portfolio-card-content">
+          <div class="portfolio-card-media">
+            <div> <img src="_images/_portfolio/open-mic-poster-01.png"> </div>
+          </div>
+          <h3 class="portfolio-item-title">Book Club posters</h3>
+          <p class="portfolio-item-date">October 2016 &ndash; present</p>
+          <p class="portfolio-item-tags">Social media, graphic design</p>
+        </div>
+      </a>
+    </div>
+    <div class="card portfolio-card">
+      <a class="card-link" href="_portfolio/lnybc.html">
+        <div class="portfolio-card-content">
+          <div class="portfolio-card-media">
+            <div> <img src="_images/logo.png"> </div>
+          </div>
+          <h3 class="portfolio-item-title">LNYBC Photography Project</h3>
+          <p class="portfolio-item-date">October 2016 &ndash; present</p>
+          <p class="portfolio-item-tags">Photography (digital &amp; film)</p>
+        </div>
+      </a>
+    </div>
 
-      <div class="card portfolio-card">
-        <a class="card-link" href="_portfolio/mhc.html" title="">
-          <div class="portfolio-card-content">
-            <div class="portfolio-card-media">
-              <div> <img src="_images/_portfolio/mhc-1.jpg"> </div>
-            </div>
-              <h3 class="portfolio-item-title">MHC 250 Python Projects</h3>
-              <p class="portfolio-item-date">January 2017 &ndash; May 2017</p>
-              <p class="portfolio-item-tags">Data Analysis, Python</p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="card portfolio-card">
-        <a class="card-link" href="_portfolio/media-infographic.html">
-          <div class="portfolio-card-content">
-            <div class="portfolio-card-media">
-              <div> <img src="_images/_portfolio/culturalappropriation-tb.jpg"> </div>
-            </div>
-            <h3 class="portfolio-item-title">MEDIA 180 cultural appropriation infographic</h3>
-            <p class="portfolio-item-date">May 2017</p>
-            <p class="portfolio-item-tags">Web, Infographic</p>
-          </div>
-        </a>
-      </div>
-      <div class="card portfolio-card">
-        <a class="card-link" href="#">
-          <div class="portfolio-card-content">
-            <div class="portfolio-card-media">
-              <div> <img src="_images/_portfolio/nycaasc-sample-1.png"> </div>
-            </div>
-            <h3 class="portfolio-item-title">NYCAASC website redesign</h3>
-            <p class="portfolio-item-date">January 2017 &ndash; April 2017</p>
-            <p class="portfolio-item-tags">Web, User Interface</p>
-          </div>
-        </a>
-      </div>
-      <div class="card portfolio-card">
-        <a class="card-link" href="#">
-          <div class="portfolio-card-content">
-            <div class="portfolio-card-media">
-              <div> <img src="_images/_portfolio/open-mic-poster-01.png"> </div>
-            </div>
-            <h3 class="portfolio-item-title">Book Club posters</h3>
-            <p class="portfolio-item-date">October 2016 &ndash; present</p>
-            <p class="portfolio-item-tags">Social media, graphic design</p>
-          </div>
-        </a>
-      </div>
-      <div class="card portfolio-card">
-        <a class="card-link" href="_portfolio/lnybc.html">
-          <div class="portfolio-card-content">
-            <div class="portfolio-card-media">
-              <div> <img src="_images/logo.png"> </div>
-            </div>
-            <h3 class="portfolio-item-title">LNYBC Photography Project</h3>
-            <p class="portfolio-item-date">October 2016 &ndash; present</p>
-            <p class="portfolio-item-tags">Photography (digital &amp; film)</p>
-          </div>
-        </a>
-      </div>
-
-    </section>
 
   </main>
 
@@ -107,22 +104,24 @@
     </ul>
     <p>or, ya know, follow me for:</p>
     <div class="footer-social">
+      <a href="https://instagram.com/rxnaij" title="Instagram">
       <div class="col-3">
         <i class="fa fa-instagram fa-2x" aria-hidden="true"></i><span class="sr-only">Instagram</span>
         <p>@rxnaij</p>
         <p>moody photos</p>
-      </div>
+      </div></a>
+      <a href="https://twitter.com/rxnaij" title="Twitter">
       <div class="col-3">
         <i class="fa fa-twitter fa-2x" aria-hidden="true"></i><span class="sr-only">Twitter</span>
         <p>@rxnaij</p>
         <p>silly thoughts</p>
-      </div>
+      </div></a>
+      <a href="https://linkedin.com/in/richard-lu-167a4050/" title="LinkedIn">
       <div class="col-3">
         <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i><span class="sr-only">LinkedIn</span>
         <p>Richard Lu</p>
         <p>hire me</p>
-      </div>
-    </div>
+      </div></a>
   </footer>
 
 </body>

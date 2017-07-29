@@ -1,8 +1,16 @@
-/* Global styles
+/* Meta-information
+Colors:
+#16161D - Eigengrau
+#9fffd7 - Seafoam
+#d9ffef - Mint
 ------------------------- */
 
+/* -------------------------
+ * Global styles
+ ------------------------- */
 
-/* Box model fix */
+/* Box model fix
+------------------------- */
 
 html {
   box-sizing: border-box;
@@ -12,23 +20,27 @@ html {
   box-sizing: inherit;
 }
 
+/* CSS Resets
+------------------------- */
 
-/* Reset content widths */
-
+/* Content widths */
 html, body {
-  /*width: 100%;*/
-  /*height: 100%;*/
   margin: 0px;
   padding: 0px;
-  /*overflow-x: hidden;*/
 }
 
+/* Document sections
+------------------------- */
 body {
   font-family: Helvetica, sans-serif;
 }
 
 main {
   line-height: 1.4em;
+}
+
+section {
+  margin-bottom: 1.5em;
 }
 
 h1, h2, h3 {
@@ -40,10 +52,12 @@ h2 {
   margin-top: 0;
 }
 
+/* Content containers
+------------------------- */
 .content-wrap {
   max-width: 925px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 25px;
   overflow: auto;
 }
 
@@ -62,61 +76,105 @@ h2 {
   width: 32%;
 }
 
+main p {
+  font-size: 14px;
+  line-height: 24px;
+}
 
-/* Header and footer styles
+@media (max-width: 425px) {
+  main p {
+    color: hsla(200,0%,0%,0.75);
+  }
+}
+@media (min-width: 426px) {
+  main p {
+    color: hsla(200,0%,0%,0.8);
+  }
+}
+
+.about-img {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  max-width: 300px;
+  border-radius: 50%;
+}
+
+/* Content components
 ------------------------- */
 
-
-/* Header */
-
-header a {
-  text-decoration: none;
+/* Button container */
+@media (max-width: 768px) {
+  .button-group {
+    text-align: center;
+  }
+}
+@media (min-width: 769px) {
+  .button-group {
+    text-align: center;
+  }
 }
 
-header a:visited {
-  color: inherit;
-}
-
-
-/* Site footer */
-
-#site-footer {
-  background: #9fffd7;
-  color: hsla(200,0%,0%,0.7);
-}
-
-#site-footer>p {
-  padding-left: 15px;
-  padding-top: 15px;
-}
-
-#site-footer p:first-child {
-  color: gray;
-}
-
-#site-footer ul {
-  list-style-type: none;
-}
-
-#site-footer a {
-  text-decoration: none;
-}
-
-.footer-social {
+/* Buttons
+/* Note: To be used for anchor elements only.
+/* Declaration format:
+   <a class="button"><span class="raised">Your Text here</span></a>
+*/
+.button { /* Touchable area of button */
+  display: inline-block;
+  min-width: 88px;
+  min-height: 48px;
+  padding-left: 8px;
+  padding-right: 8px;
   text-align: center;
-  font-size: 13px;
+  line-height: 48px;
 }
 
-.footer-social a:visited {
-  color: inherit;
+.button span { /* Visible button */
+  display: inline-block;
+  min-width: 64px;
+  height: 36px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 2px;
+  line-height: 36px;
+  font-size: 14px;
+  text-decoration: none;
 }
 
+.raised { /* Raised button */
+  background-color: hsla(155, 100%, 93%, 1.0);
+  color: #000;
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
 
-/* Navigation styles
+@media (max-width: 768px) {/* Raised button shadow for mobile devices */
+  .raised {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+}
+
+/* Raised button states */
+.raised:hover {
+  background-color: hsla(155, 100%, 83%, 1.12);
+}
+
+@media (min-width: 769px) { /* Desktop browsers add shadow on hover */
+  .raised:hover {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+}
+
+/* -------------------------
+ * Navigation styles
 ------------------------- */
 
 nav {
   text-align: center;
+}
+
+.menu-icon {
+  width: 100px;
 }
 
 .btn-blocky {
@@ -126,7 +184,7 @@ nav {
   height: 150px;
   margin: 0 auto;
   border: black 5px solid;
-  border-radius: 10%;
+  border-radius: 20%;
   text-align: center;
 }
 
@@ -145,17 +203,6 @@ nav {
   left: 40px;
 }
 
-
-/* Cards are large, selectable "cards" that link to other pages--see the portfolio */
-
-.card-link:link {}
-
-
-/* visited link */
-
-.card-link:visited {}
-
-
 /* mouse over link */
 
 .card-link:hover {}
@@ -166,8 +213,47 @@ nav {
 .card-link:active {}
 
 
-/* Site navigation styles
+/* -------------------------
+ * Header and footer styles
 ------------------------- */
+
+/* Site header
+------------------------- */
+
+header {
+  box-shadow: 0 2px 5px rgba(0,0,0,.26);
+  z-index: 2;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header a:visited {
+  color: inherit;
+}
+
+.site-header {
+  background: #16161D;
+  color: white;
+}
+
+.site-header h2 {
+  padding-top: 15px;
+  text-align: center;
+}
+
+.site-header h1~p {
+  margin: 0;
+}
+
+.site-header h1~p:last-of-type {
+  margin-top: 20px;
+  font-style: italic;
+}
+
+/* Site navigator component */
 
 .site-nav {
   border-bottom: 1px solid #9fffd7;
@@ -186,46 +272,78 @@ nav {
 }
 
 
-/* Index styles
+/* Site footer
 ------------------------- */
 
-.about-img {
-  display: block;
-  margin: 0 auto;
-  max-width: 300px;
-  border: black solid 5px;
-  border-radius: 50%;
+#site-footer {
+  background: #9fffd7;
+  color: hsla(200,0%,0%,0.7);
+  z-index: 0;
 }
 
-.menu-icon {
-  width: 100px;
-}
-
-
-/* Portfolio styles
-------------------------- */
-
-
-/* Header */
-
-.portfolio-header {
-  background: #16161D;
-  color: white;
-}
-
-.portfolio-header h2 {
+#site-footer>p {
+  padding-left: 15px;
   padding-top: 15px;
+}
+
+#site-footer p:first-child {
+  color: gray;
+}
+
+#site-footer ul {
+  list-style-type: none;
+}
+
+#site-footer a div {
+  text-decoration: none;
+  /*transition: all 0.3s cubic-bezier(.25, .8, .25, 1);*/
+}
+#site-footer a div:hover {
+  /*background-color: hsl(155, 100%, 72.3%);*/
+}
+
+.footer-social {
   text-align: center;
+  font-size: 13px;
 }
 
-.portfolio-header h1~p {
-  margin: 0;
+.footer-social a:visited {
+  color: inherit;
 }
 
-.portfolio-header h1~p:last-of-type {
-  margin-top: 20px;
-  font-style: italic;
+
+/* -------------------------
+ * index.html styles
+------------------------- */
+#bio p {
+  font-size: 24px;
+  line-height: 32px;
+  color: hsla(200,0%,0%,0.65);;
 }
+
+/* Experimental layout follows! */
+@media (min-width: 469px) {
+  #bio, #lightningblog {
+    display: inline-block;
+    width: 50%;
+    float: left;
+  }
+  #bio {
+    padding-right: 20px;
+  }
+  #lightningblog {
+    padding-left: 20px;
+    border-left: #9fffd7 1px solid;
+  }
+}
+
+/* -------------------------
+ * portfolio.html styles
+------------------------- */
+
+
+/* Header
+------------------------- */
 
 .portfolio-home-title {
   font-size: 1em;
@@ -238,7 +356,8 @@ nav {
 }
 
 
-/* Directory */
+/* Directory
+------------------------- */
 
 .card {
   max-width: 425px;
@@ -248,6 +367,21 @@ nav {
   border-radius: 2px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+@media (min-width: 769px) {
+  .card {
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.24);
+    display: inline-block;
+    margin: 1em;
+    width: 45%;
+    height: auto;
+  }
+  .card:hover {
+    box-shadow: 0px 8px 3px rgba(0, 0, 0, 0.12), 0px 8px 2px rgba(0, 0, 0, 0.24);
+  }
+  .portfolio-card-content:hover {
+    background-color: hsla(155, 100%, 83%, 1.12);
+  }
 }
 
 .portfolio-card {
@@ -296,7 +430,7 @@ nav {
   margin: 0;
   padding: 16px;
   padding-top: 0;
-  font-size: 14px;
+  /*font-size: 14px;*/
   color: hsla(200,0%,0%,0.7);
 }
 
@@ -306,7 +440,9 @@ nav {
 /* END: Portfolio page-specific styles */
 
 
-/* Portfolio items */
+/* -------------------------
+ *  _portfolio/ page styles
+ --------------------------*/
 
 @media (max-width: 425px) {
   .tagline img, .project img, .about img, .whats-next img {

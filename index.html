@@ -3,69 +3,55 @@
 <head>
   <title>Welcome to my website!</title>
   <meta charset="UTF-8">
+  <meta name="description" content="Official website of Richard Lu: aspiring web designer, student, shy kid.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://use.fontawesome.com/08747c3547.js"></script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header>
+  <header class="site-header">
 
     <div class="content-wrap">
 
       <nav class="site-nav">
+        <img class="about-img menu-icon" src="_images/logo.png" alt="rxnaij">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
         </ul>
       </nav>
 
-      <img class="about-img" src="_images/logo.png">
       <h1>A Website</h1>
-      <p>Welcome to my site! It's my site. My name is rxnaij.</p>
-      <p>I am a college student currently studying interaction design. Right now, the landmarks on my map of academic interests include front-end web design and development, web UX/UI, social justice, data science and algorithmic injustice, and the literary arts.</p>
-
-      <nav>
-        <a href="portfolio.html">
-          <div class="btn-blocky">
-            <span>Portfolio</span>
-            <i class="fa fa-book fa-4x" aria-hidden="true"></i>
-          </div>
-        </a>
-      </nav>
+      <p>Welcome to my site! It's my site.</p>
 
     </div>
 
   </header>
 
-  <section>
+  <main class="main content-wrap front-page">
 
-    <div class="content-wrap">
+    <section id="bio">
+      <h1>I'm rxnaij/Richard. Sup with it!</h1>
+      <p>I'm currently in college studying interaction design. My passions include front-end web design, UI/UX design, social justice, data science and algorithmic injustice, and the literary arts.</p>
+      <div class="button-group">
+        <a class="button" href="portfolio.html"><span class="raised">PORTFOLIO!</span></a>
+      </div>
+    </section>
 
-      <h2>About me</h2>
+    <section id="lightningblog">
+      <h1>Lightningblog</h2>
+      <p>(<em>Richard's life updates, condensed!</em>)</p>
 
-      <p>I'm really lazy, but am really trying to work on that at the moment. Trying to get my life back into order so I can focus on things I'm passionate about: writing, reading, learning web design.</p>
-      <p>Not really craving a particular food right now, but water will do. (It's hot.)</p>
-      <p><strong>Anime is cool</strong>. I just finished <em>Erased</em> and was a little disappointed by the ending. Currently checking out <em>Cowboy Bebop</em>. (<a href="https://myanimelist.net/animelist/saboteu" title="MyAnimeList">Here's my almost-comprehensive watchlist if you're interested</a>.)</p>
-      <p><strong>Photography is cool</strong>. I'm currently in love with the Japanese/east Asian "bright/cool summer" film photography style on Instagram.</p>
-      <p><strong>Video games are cool</strong>. I like competitive Super Smash Bros. Melee and In The Groove/Stepmania, but am on a bit of a break from both right now. I'm playing lots of Fire Emblem Heroes.</p>
+      <p><strong>So, how's life? &ndash;</strong><br>I'm really lazy, but am really trying to work on that at the moment. Trying to get my life back into order so I can focus on things I'm passionate about: writing, reading, learning web design.</p>
+      <p><strong>Current craving &ndash;</strong><br>Not craving a particular food right now, but water's great!</p>
+      <p><strong>Anime &ndash;</strong><br>Just finished <em>Erased</em> and was disappointed by the ending. Currently checking out <em>Cowboy Bebop</em>. (<a href="https://myanimelist.net/animelist/saboteu" title="MyAnimeList">Here's my complete watchlist</a>.)</p>
+      <p><strong>Photography &ndash;</strong><br>ADORING the dreamy, overexposed film photography style of many Japanese Instagrammers!</p>
+      <p><strong>Video games &ndash;</strong><br>I like competitive Super Smash Bros. Melee and In The Groove/Stepmania/DDR, but am taking a break from both right now. I'm playing lots of Fire Emblem Heroes.</p>
 
-    </div>
+    </section>
 
-  </section>
-
-  <section>
-
-    <div class="content-wrap">
-
-      <h2>About you</h2>
-
-      <p>Enough about me. Tell me about yourself.</p>
-      <p>I'd love to hear about your work ethic, your favorite anime, and your current food craving. Just shoot me an email.</p>
-
-    </div>
-
-  </section>
+  </main>
 
   <!--TODO: find out how to list the social icons in a cleaner way using float or display:block. Rewatch the CSS essential training course and/or look it up.-->
   <footer id="site-footer">
