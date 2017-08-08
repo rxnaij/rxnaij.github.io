@@ -97,18 +97,17 @@
 <script>
   const lightSwitch = document.querySelector("#lightswitch");
   const page = document.querySelector(".lnybc-page");
-  var lightState = page.classList.contains("light-off");
+  var lightState = page.classList.contains("light-off"); // false on page load
 
-  function toggleLight(light){
-    if (!light) {
+
+  lightSwitch.addEventListener("click", function (){
+    if (!lightState) {
       page.classList.add("light-off");
-      light = true;
+      lightState = true;
     } else {
       page.classList.remove("light-off");
-      light = false;
+      lightState = false;
     }
-  }
-
-  lightSwitch.addEventListener("click", toggleLight(lightState), false);
+  }, false);
 </script>
 </html>
