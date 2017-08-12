@@ -367,14 +367,19 @@ header a:visited {
 ------------------------- */
 
 .portfolio-page {
-  text-align: center;
+  /*text-align: center;*/
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .card {
-  max-width: 425px;
-  margin: 8px;
+  /*max-width: 425px;*/
+  /*margin: 8px;
   margin-top: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 16px;*/
   transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
 
@@ -387,10 +392,10 @@ header a:visited {
 @media (min-width: 769px) {
   .card {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    display: inline-block;
-    margin: 16px;
-    width: 45%;
-    height: auto;
+    /*display: inline-block;
+    margin: 16px;*/
+    /*width: 45%;
+    height: auto;*/
   }
   .card:hover {
     /*box-shadow: 0px 8px 3px rgba(0, 0, 0, 0.12), 0px 8px 3px rgba(0, 0, 0, 0.24);*/
@@ -404,8 +409,8 @@ header a:visited {
 }
 
 .portfolio-card {
-  max-width: 750px;
-  overflow: auto;
+  /*max-width: 750px;
+  overflow: auto;*/
 }
 
 .portfolio-card a {
