@@ -57,7 +57,7 @@ h2 {
 .content-wrap {
   max-width: 925px;
   margin: 0 auto;
-  padding: 25px;
+  padding: 22px;
   overflow: auto;
 }
 
@@ -65,19 +65,21 @@ h2 {
   margin-top: 50px;
 }
 
-.col-narrow {
-  display: inline-block;
-  width: 15%;
+/** Cards **/
+
+.card {
+  z-index: 1;
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-.col-wide {
-  display: inline-block;
-  width: 80%;
-}
-
-.col-3 {
-  display: inline-block;
-  width: 32%;
+@media (min-width: 769px) {
+  .card:hover {
+    /*box-shadow: 0px 8px 3px rgba(0, 0, 0, 0.12), 0px 8px 3px rgba(0, 0, 0, 0.24);*/
+    /*-webkit-box-shadow: 0px 8px 3px 3px rgba(0,0,0,0.24);
+    -moz-box-shadow: 0px 8px 3px 3px rgba(0,0,0,0.24);*/
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.12);
+  }
 }
 
 main p {
@@ -219,15 +221,6 @@ nav {
   left: 40px;
 }
 
-/* mouse over link */
-
-.card-link:hover {}
-
-
-/* selected link */
-
-.card-link:active {}
-
 
 /* -------------------------
  * Header and footer styles
@@ -367,81 +360,59 @@ header a:visited {
 ------------------------- */
 
 .portfolio-page {
-  /*text-align: center;*/
+  text-align: center;
 }
 
-.wrapper {
+/** CSS Grid layout **/
+
+.portfolio-wrapper {
   display: grid;
-  grid-gap: 16px;
+  grid-gap: 32px;
 }
-
 
 @media (max-width: 768px) {
-  .wrapper {
+  .portfolio-wrapper {
     grid-auto-flow: row;
   }
 }
 
-
 @media (min-width: 769px) {
-  .wrapper {
+  .portfolio-wrapper {
     grid-template-columns: 1fr 1fr;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }
 
-
-
-.card {
-  z-index: 1;
-  /*max-width: 425px;*/
-  /*margin: 8px;
-  margin-top: 16px;
-  margin-bottom: 16px;*/
-  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
-}
-
-@media (max-width: 768px) {
-  .card {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  }
-}
-
-@media (min-width: 769px) {
-  .card {
-
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    /*display: inline-block;
-    margin: 16px;*/
-    /*width: 45%;
-    height: auto;*/
-  }
-  .card:hover {
-    /*box-shadow: 0px 8px 3px rgba(0, 0, 0, 0.12), 0px 8px 3px rgba(0, 0, 0, 0.24);*/
-    /*-webkit-box-shadow: 0px 8px 3px 3px rgba(0,0,0,0.24);
-    -moz-box-shadow: 0px 8px 3px 3px rgba(0,0,0,0.24);*/
-    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.04);
-  }
-  .portfolio-card-content:hover {
-    background-color: hsla(155, 100%, 83%, 1.12);
-  }
-}
+/** Cards **/
 
 .portfolio-card {
-  /*max-width: 750px;
-  overflow: auto;*/
+  z-index: 5;
+  overflow: auto;
+  background: #d9ffef;
+}
+
+.portfolio-card:hover {
+  background-color: hsla(155, 100%, 83%, 1.12);
 }
 
 .portfolio-card a {
   color: inherit;
+  color: hsla(200,0%,0%,0.6);
   text-decoration: none;
 }
 
+.portfolio-card a:hover {
+  color: hsla(200,0%,0%,0.9);;
+}
+
 .portfolio-card-content {
-  background: #d9ffef;
+  z-index: 3;
   transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
 
 .portfolio-card-media {
+  z-index: 2;
   width: 100%;
   padding-bottom: 56.25%;
   position: relative;
@@ -452,7 +423,6 @@ header a:visited {
   position: absolute;
   top: 0; bottom: 0; left: 0; right: 0;
 }
-
 
 .portfolio-card-media > div > img {
   width: 100%;
@@ -465,8 +435,8 @@ header a:visited {
   padding: 16px;
   padding-top: 24px;
   font-size: 24px;
-  font-weight: normal;
-  color: hsla(200,0%,0%,0.5);
+  font-weight: lighter;
+  /*color: hsla(200,0%,0%,0.5);*/
 }
 
 .portfolio-card-content p {
