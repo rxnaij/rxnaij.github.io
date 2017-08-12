@@ -372,10 +372,27 @@ header a:visited {
 
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
 }
 
+
+@media (max-width: 768px) {
+  .wrapper {
+    grid-auto-flow: row;
+  }
+}
+
+
+@media (min-width: 769px) {
+  .wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+
 .card {
+  z-index: 1;
   /*max-width: 425px;*/
   /*margin: 8px;
   margin-top: 16px;
@@ -391,6 +408,7 @@ header a:visited {
 
 @media (min-width: 769px) {
   .card {
+
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     /*display: inline-block;
     margin: 16px;*/
