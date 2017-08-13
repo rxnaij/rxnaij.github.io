@@ -407,12 +407,12 @@ header a:visited {
 }
 
 .portfolio-card-content {
-  z-index: 3;
+  /*z-index: 3;*/
   transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 }
 
 .portfolio-card-media {
-  z-index: 2;
+  /*z-index: 2;*/
   width: 100%;
   padding-bottom: 56.25%;
   position: relative;
