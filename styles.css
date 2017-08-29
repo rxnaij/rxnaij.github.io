@@ -29,7 +29,7 @@ html, body {
   padding: 0px;
 }
 
-/* Document sections
+/* Document content
 ------------------------- */
 body {
   font-family: Helvetica, sans-serif;
@@ -56,41 +56,12 @@ blockquote {
   font-style: italic;
 }
 
-/* Content containers
-------------------------- */
-.content-wrap {
-  max-width: 925px;
-  margin: 0 auto;
-  padding: 22px;
-  overflow: auto;
-}
-
-.content-wrap img~h2 {
-  margin-top: 50px;
-}
-
-/** Cards **/
-
-.card {
-  z-index: 1;
-  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-
-@media (min-width: 769px) {
-  .card:hover {
-    /*box-shadow: 0px 8px 3px rgba(0, 0, 0, 0.12), 0px 8px 3px rgba(0, 0, 0, 0.24);*/
-    /*-webkit-box-shadow: 0px 8px 3px 3px rgba(0,0,0,0.24);
-    -moz-box-shadow: 0px 8px 3px 3px rgba(0,0,0,0.24);*/
-    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.12);
-  }
-}
-
 main p {
   font-size: 14px;
   line-height: 24px;
 }
 
+/* Font color variations for differently sized screens */
 @media (max-width: 425px) {
   main p {
     color: hsla(200,0%,0%,0.75);
@@ -110,6 +81,38 @@ main p {
   border-radius: 50%;
 }
 
+/* Content containers
+------------------------- */
+
+/** Content wrap */
+
+.content-wrap {
+  max-width: 925px;
+  margin: 0 auto;
+  padding: 22px;
+  overflow: auto;
+}
+
+/* What is this for? */
+.content-wrap img~h2 {
+  margin-top: 50px;
+}
+
+/** Cards **/
+
+.card {
+  z-index: 1;
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+@media (min-width: 769px) {
+  .card:hover {
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.12);
+  }
+}
+
+
 /* Content components
 ------------------------- */
 
@@ -126,10 +129,10 @@ main p {
 }
 
 /* Buttons
-/* Note: To be used for anchor elements only.
-/* Declaration format:
-   <a class="button"><span class="raised">Your Text here</span></a>
-*/
+ * Note: To be used for anchor elements only.
+ * Declaration format:
+ *   <a class="button"><span class="raised">Your Text here</span></a>
+ */
 .button { /* Touchable area of button */
   display: inline-block;
   min-width: 88px;
@@ -342,6 +345,7 @@ header a:visited {
   }
 }
 
+
 /* -------------------------
  * portfolio.html styles
 ------------------------- */
@@ -400,13 +404,13 @@ header a:visited {
   background-color: hsla(155, 100%, 83%, 1.12);
 }
 
-.portfolio-card a {
+.portfolio-card .card-link {
   color: inherit;
   color: hsla(200,0%,0%,0.6);
   text-decoration: none;
 }
 
-.portfolio-card a:hover {
+.portfolio-card .card-link:hover {
   color: hsla(200,0%,0%,0.9);;
 }
 
