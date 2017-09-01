@@ -56,19 +56,19 @@ blockquote {
   font-style: italic;
 }
 
-main p {
+main p, ol {
   font-size: 14px;
   line-height: 24px;
 }
 
 /* Font color variations for differently sized screens */
 @media (max-width: 425px) {
-  main p {
+  main p, ol {
     color: hsla(200,0%,0%,0.75);
   }
 }
 @media (min-width: 426px) {
-  main p {
+  main p, ol {
     color: hsla(200,0%,0%,0.8);
   }
 }
@@ -79,6 +79,10 @@ main p {
   width: 50%;
   max-width: 300px;
   border-radius: 50%;
+}
+
+.article-img-right {
+  float: right;
 }
 
 /* Content containers
@@ -478,6 +482,7 @@ header a:visited {
 .tagline img, .project img, .about img, .whats-next img {
   display: block;
   margin: 0 auto;
+  padding: 1em;
   max-width: 720px;
   height: auto;
 }
