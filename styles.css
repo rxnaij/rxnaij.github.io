@@ -85,6 +85,11 @@ main p, ol {
   float: right;
 }
 
+.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
 /* Content containers
 ------------------------- */
 
@@ -303,6 +308,7 @@ header a:visited {
   font-size: 14px;
   line-height: 24px;
   text-align: center;
+  
 }
 
 .contact ul {
@@ -314,11 +320,13 @@ header a:visited {
 }
 
 @media (min-width: 769px) {
+  #site-footer {
+    display: flex;
+    justify-content: center;
+  }
   .contact {
-    display: inline-block;
-    width: 45%;
+    margin: 0 30px;
     height: 116px;
-    border: green solid 1px;
   }
 }
 
@@ -442,13 +450,13 @@ header a:visited {
 
 
 /* NOTE: The following three styles describe the date and tags as they appear in the Portfolio page's cards and are not universal to each item's respective detail page. */
-.portfolio-card-content h3 {
+.portfolio-item-title {
   margin: 0;
   padding: 16px;
   padding-top: 24px;
   font-size: 24px;
-  font-weight: lighter;
-  /*color: hsla(200,0%,0%,0.5);*/
+  font-weight: 500;
+  color: hsla(200,0%,0%,0.7);
 }
 
 .portfolio-card-content p {
